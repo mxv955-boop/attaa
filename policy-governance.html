@@ -1,0 +1,1009 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="الهيكل التنظيمي والحوكمة | منظمة عطاء للسلام والتنمية">
+  <title>الهيكل التنظيمي والحوكمة | منظمة عطاء للسلام والتنمية</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2C0 0.895431 0.895431 0 2 0H14C15.1046 0 16 0.895431 16 2V14C16 15.1046 15.1046 16 14 16H2C0.895431 16 0 15.1046 0 14V2Z' fill='%232C2C2C'/%3E%3Cpath d='M9.50049 8.00043C9.77637 8.00071 10.0012 8.22457 9.99463 8.50043C9.96213 9.8546 9.7985 11.0857 9.54346 12.0209C9.40139 12.5418 9.22308 13.0001 9.00439 13.3393C8.80014 13.656 8.47201 14.0002 8.00049 14.0004C7.52881 14.0004 7.20092 13.6561 6.99658 13.3393C6.77785 13.0001 6.59961 12.5419 6.45752 12.0209C6.41638 11.8701 6.37825 11.7109 6.34229 11.5453C6.27454 11.2324 6.52935 10.9512 6.84912 10.9682C7.07892 10.9808 7.27644 11.1479 7.32666 11.3725C7.35676 11.5072 7.38904 11.6361 7.42236 11.7582C7.55165 12.2322 7.69634 12.58 7.83643 12.7973C7.91904 12.9251 8.08204 12.9253 8.16455 12.7973C8.3046 12.58 8.44937 12.2321 8.57861 11.7582C8.80619 10.9237 8.96224 9.78447 8.99463 8.50043C9.00164 8.22442 9.22438 8.00043 9.50049 8.00043Z' fill='white'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@500;700;800&family=Noto+Sans+Arabic:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="policy-doc.css">
+  <style>
+    /* ── Org Chart ── */
+    .gov-chart {
+      margin: 30px 0;
+      overflow-x: auto;
+      padding-bottom: 10px
+    }
+
+    .gov-chart-inner {
+      min-width: 680px
+    }
+
+    .org-level {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      position: relative;
+      margin-bottom: 0
+    }
+
+    .org-node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative
+    }
+
+    .org-box {
+      padding: 11px 18px;
+      border-radius: 13px;
+      font-size: 14.5px;
+      font-weight: 700;
+      text-align: center;
+      min-width: 140px;
+      max-width: 190px;
+      border: 2px solid transparent;
+      line-height: 1.4;
+      white-space: nowrap;
+      font-family: "Inter", "Noto Sans Arabic", sans-serif
+    }
+
+    .org-box.tier1 {
+      background: linear-gradient(135deg, #0a1f4d, #12388a);
+      color: #fff;
+      border-color: #12388a;
+      font-size: 15px;
+      min-width: 200px
+    }
+
+    .org-box.tier2 {
+      background: #fff;
+      color: #0a1f4d;
+      border-color: #12388a;
+      box-shadow: 0 4px 14px rgba(10, 31, 77, .1)
+    }
+
+    .org-box.tier3 {
+      background: #eef2f9;
+      color: #1a2e5a;
+      border-color: #c5d3e8
+    }
+
+    .org-box.tier4 {
+      background: #f6f9f0;
+      color: #2a4a1a;
+      border-color: #b7d4a0;
+      font-size: 13.5px;
+      min-width: 110px
+    }
+
+    .org-box.tier4.finance {
+      background: #fff8ee;
+      border-color: #e8c87a;
+      color: #5c3d00
+    }
+
+    .org-box.tier4.area {
+      background: #f0f5ff;
+      border-color: #8aa8e0;
+      color: #1a3080
+    }
+
+    .org-connector-v {
+      width: 2px;
+      height: 22px;
+      background: #c5d3e8;
+      margin: 0 auto
+    }
+
+    .org-connector-h {
+      height: 2px;
+      background: #c5d3e8;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      right: 50%
+    }
+
+    .org-row {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 0
+    }
+
+    .org-branch {
+      display: flex;
+      flex-direction: column;
+      align-items: center
+    }
+
+    .org-multi-parent {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center
+    }
+
+    .org-horiz-line {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 14px;
+      flex-wrap: wrap;
+      position: relative
+    }
+
+    .org-horiz-line::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: #c5d3e8
+    }
+
+    .org-horiz-child {
+      display: flex;
+      flex-direction: column;
+      align-items: center
+    }
+
+    .org-horiz-child .org-connector-v {
+      height: 14px
+    }
+
+    /* Wide children rows */
+    .org-wide-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 0
+    }
+
+    .org-wide-row .org-box {
+      min-width: 100px;
+      font-size: 13px;
+      padding: 9px 13px
+    }
+
+    /* Special: two-col split at same level */
+    .org-split {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      align-items: flex-start
+    }
+
+    .org-split-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center
+    }
+
+    /* Section icons */
+    .gov-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 13px;
+      background: var(--bg-green);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0
+    }
+
+    .gov-icon svg {
+      width: 26px;
+      height: 26px;
+      stroke: var(--green-dark);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container">
+      <span data-en="Non-governmental, non-profit national organization">منظمة وطنية غير حكومية وغير ربحية</span>
+      <span data-en="Registered with the Humanitarian Aid Commission — No. 623/2024">مسجلة لدى مفوضية العون الإنساني — رقم²3/2024</span>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <img src="images/logo.jpg" alt="ATTAA logo">
+        <span class="brand-text">
+          <span class="brand-name" data-en="Attaa Organization">منظمة عطاء</span>
+          <span class="brand-sub" data-en="for Peace and Development">للسلام والتنمية</span>
+        </span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html" data-en="Home">الرئيسية</a>
+        <a href="about.html" data-en="About Us">من نحن</a>
+        <a href="programs.html" data-en="Programs">البرامج</a>
+        <a href="policies.html" class="active" data-en="Policies">السياسات</a>
+        <a href="accountability.html" data-en="Accountability">المساءلة</a>
+        <a href="reports.html" data-en="Reports">التقارير</a>
+        <a href="jobs.html" data-en="Jobs">الوظائف</a>
+        <a href="contact.html" data-en="Contact Us">اتصل بنا</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="lang" id="langBtn" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="8"></circle>
+          <path d="M4 12h16M12 4a13.5 13.5 0 010 16M12 4a13.5 13.5 0 000 16"></path>
+        </svg>
+        <span>EN</span>
+      </button>
+        <a href="donate.html" class="btn btn-green btn-sm" data-en="Donate">تبرّع</a>
+      <a href="volunteer.html" class="btn btn-light btn-sm btn-vol" data-en="Volunteer">تطوّع</a>
+      <a href="accountability.html#form" class="btn btn-navy">
+          <span data-en="Safe Report">إبلاغ آمن</span>
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
+            <path d="M8.5 12l2.5 2.5 4.5-5" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="pd-progress"><i id="pdBar"></i></div>
+
+  <!-- HERO -->
+  <section class="pd-hero">
+    <div class="container">
+      <nav class="pd-crumb">
+        <a href="policies.html#library" data-en="Policies">السياسات</a>
+        <svg class="arrow" viewBox="0 0 24 24">
+          <path d="M15 6l-6 6 6 6" />
+        </svg>
+        <span data-en="Organizational Structure & Governance">الهيكل التنظيمي والحوكمة</span>
+      </nav>
+      <div class="pd-hero-grid">
+        <div>
+          <div class="pol-eyebrow" data-en="Policy 08">السياسة 08</div>
+          <h1 data-en="Organizational Structure &amp; Governance">الهيكل التنظيمي والحوكمة</h1>
+          <div class="en-sub" data-en="الهيكل التنظيمي والحوكمة">GOVERNANCE STRUCTURE</div>
+          <p class="lead"
+            data-en="Explains the decision-making levels and the roles of the General Assembly, Board of Directors, and all field staff across every sector.">
+            يشرح مستويات اتخاذ القرار وأدوار الجمعية العمومية ومجلس الإدارة وجميع العاملين الميدانيين
+            في كل قطاع.</p>
+          <div class="pd-meta">
+            <span><small data-en="Reading time">مدة القراءة</small><b data-en="10 min">10 دقائق</b></span>
+            <span><small data-en="Applies to">ينطبق على</small><b data-en="All ATTAA staff and governance bodies">جميع
+                العاملين وهيئات الحوكمة</b></span>
+            <span><small data-en="Endorsed by">اعتماد</small><b data-en="General Assembly">الجمعية العمومية</b></span>
+          </div>
+          <div class="pd-actions">
+            <a href="policies.html#library" class="btn btn-navy">
+              <svg viewBox="0 0 24 24" width="18" height="18">
+                <path d="M19 12H5M11 6l-6 6 6 6" />
+              </svg>
+              <span data-en="Back to Policies">العودة إلى السياسات</span>
+            </a>
+          </div>
+        </div>
+        <div class="orb" aria-hidden="true">
+          <div class="core">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 9l9-5 9 5H3z" />
+              <path d="M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 21h18" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="pd-main">
+    <div class="container pd-layout">
+
+      <!-- TABLE OF CONTENTS -->
+      <aside class="pd-toc" id="toc">
+        <div class="pd-toc-h" data-en="In this document">في هذه الوثيقة</div>
+        <a href="#s1"><span>01</span><i data-en="Overview">نظرة عامة</i></a>
+        <a href="#s2"><span>02</span><i data-en="General Assembly">الجمعية العمومية</i></a>
+        <a href="#s3"><span>03</span><i data-en="Board of Directors">مجلس الإدارة</i></a>
+        <a href="#s4"><span>04</span><i data-en="General Director">المدير العام</i></a>
+        <a href="#s5"><span>05</span><i data-en="Program Sectors">القطاعات البرامجية</i></a>
+        <a href="#s6"><span>06</span><i data-en="Support Functions">الوظائف الداعمة</i></a>
+        <a href="#s7"><span>07</span><i data-en="Management Team">فريق الإدارة</i></a>
+        <a href="#s8"><span>08</span><i data-en="Org Chart">الهيكل التنظيمي</i></a>
+        <a class="pd-back" href="policies.html#library">
+          <svg class="arrow" viewBox="0 0 24 24">
+            <path d="M19 12H5M11 6l-6 6 6 6" />
+          </svg>
+          <span data-en="All policies">كل السياسات</span>
+        </a>
+      </aside>
+
+      <!-- DOCUMENT -->
+      <article class="pd-doc bi">
+
+        <!-- Doc Header -->
+        <div class="pd-doc-head">
+          <img src="images/logo.jpg" alt="ATTAA">
+          <div>
+            <b data-en="Attaa Organization for Peace and Development (ATTAA)">منظمة عطاء للسلام والتنمية (ATTAA)</b>
+            <span data-en="Organizational Structure & Governance — Policy Document 08">الهيكل التنظيمي والحوكمة — وثيقة
+              السياسة 08</span>
+          </div>
+        </div>
+
+        <!-- ─── SECTION 1: Overview ─── -->
+        <section class="pd-sec" id="s1">
+          <div class="pd-sh">
+            <span class="pd-num">01</span>
+            <h2 data-en="Overview">نظرة عامة</h2>
+          </div>
+          <blockquote class="pd-quote"
+            data-en="The Governance Structure of Attaa Organization for Peace and Development defines clear lines of authority, accountability, and decision-making across all levels of the organization.">
+            يُحدّد الهيكل التنظيمي لمنظمة عطاء للسلام والتنمية خطوط السلطة والمساءلة واتخاذ القرار بشكل واضح عبر جميع
+            مستويات المنظمة.</blockquote>
+          <p
+            data-en="Giving Organization for Peace and Development (ATTAA) operates under a structured governance framework that ensures transparency, accountability, and effective program delivery. The structure defines the roles and responsibilities of every level — from the General Assembly at the top to field officers at the operational level.">
+            تعمل منظمة عطاء للسلام والتنمية في إطار حوكمة منظّمة يضمن الشفافية والمساءلة وفعالية تقديم البرامج. يُحدّد
+            الهيكل أدوار ومسؤوليات كل مستوى — من الجمعية العمومية في القمة إلى المسؤولين الميدانيين على المستوى
+            التشغيلي.</p>
+          <p
+            data-en="This document presents the full organizational chart and describes in detail the functions of each governance body and operational unit within ATTAA.">
+            تعرض هذه الوثيقة الهيكل التنظيمي الكامل وتصف بالتفصيل وظائف كل هيئة حوكمة ووحدة تشغيلية داخل المنظمة.</p>
+        </section>
+
+        <!-- ─── SECTION 2: General Assembly ─── -->
+        <section class="pd-sec" id="s2">
+          <div class="pd-sh">
+            <span class="pd-num">02</span>
+            <h2 data-en="General Assembly">الجمعية العمومية</h2>
+          </div>
+          <div class="pd-callout">
+            <div class="pd-co-ico">
+              <svg viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+              </svg>
+            </div>
+            <div>
+              <b data-en="Highest Governing Body">الهيئة الحاكمة العليا</b>
+              <p
+                data-en="The General Assembly is the supreme decision-making authority of ATTAA. It sets the strategic direction, approves major policies, and ensures the organization fulfills its mission.">
+                الجمعية العمومية هي السلطة العليا في اتخاذ القرار في منظمة عطاء. تضع التوجه الاستراتيجي وتعتمد السياسات
+                الرئيسية وتضمن تحقيق المنظمة لرسالتها.</p>
+            </div>
+          </div>
+          <ul class="pd-ticks">
+            <li data-en="Sets the overall strategic direction and vision of ATTAA">تضع التوجه الاستراتيجي والرؤية
+              الشاملة للمنظمة</li>
+            <li data-en="Approves major organizational policies and constitutional changes">تعتمد السياسات المؤسسية
+              الكبرى والتعديلات الدستورية</li>
+            <li data-en="Elects and oversees the Board of Directors">تنتخب مجلس الإدارة وتشرف عليه</li>
+            <li data-en="Reviews and approves the annual budget and financial reports">تراجع الميزانية السنوية والتقارير
+              المالية وتعتمدها</li>
+            <li data-en="Ensures the organization remains true to its mission of peace and development">تضمن التزام
+              المنظمة برسالتها في السلام والتنمية</li>
+          </ul>
+        </section>
+
+        <!-- ─── SECTION 3: Board of Directors ─── -->
+        <section class="pd-sec" id="s3">
+          <div class="pd-sh">
+            <span class="pd-num">03</span>
+            <h2 data-en="Board of Directors">مجلس الإدارة</h2>
+          </div>
+          <p
+            data-en="The Board of Directors is responsible for the governance and strategic management of ATTAA. It operates under the authority of the General Assembly and provides oversight of the executive management.">
+            مجلس الإدارة مسؤول عن الحوكمة والإدارة الاستراتيجية للمنظمة. يعمل تحت سلطة الجمعية العمومية ويُشرف على
+            الإدارة التنفيذية.</p>
+          <div class="pd-two">
+            <div class="pd-sub card">
+              <h3><span>A</span><i style="font-style:normal" data-en="Strategic Oversight">الإشراف الاستراتيجي</i></h3>
+              <p
+                data-en="Provides strategic guidance and oversight to ensure ATTAA achieves its goals. Reviews progress against the strategic plan and takes corrective action where needed.">
+                يوفر التوجيه الاستراتيجي والإشراف لضمان تحقيق المنظمة لأهدافها. يراجع التقدم وفق الخطة الاستراتيجية
+                ويتخذ الإجراءات التصحيحية عند الحاجة.</p>
+            </div>
+            <div class="pd-sub card">
+              <h3><span>B</span><i style="font-style:normal" data-en="Financial Accountability">المساءلة المالية</i>
+              </h3>
+              <p
+                data-en="Oversees financial management, approves budgets, reviews audits, and ensures proper financial controls are in place throughout the organization.">
+                يشرف على الإدارة المالية، ويعتمد الميزانيات، ويراجع عمليات التدقيق، ويضمن وجود ضوابط مالية مناسبة في
+                جميع أنحاء المنظمة.</p>
+            </div>
+          </div>
+          <ul class="pd-ticks" style="margin-top:22px">
+            <li data-en="Appoints and evaluates the General Director and senior management">يعيّن المدير العام والإدارة
+              العليا ويقيّمها</li>
+            <li data-en="Ensures compliance with legal requirements and donor obligations">يضمن الامتثال للمتطلبات
+              القانونية والتزامات الجهات المانحة</li>
+            <li data-en="Approves organizational policies and major operational decisions">يعتمد السياسات المؤسسية
+              والقرارات التشغيلية الكبرى</li>
+            <li data-en="Monitors risk management and safeguarding practices">يراقب إدارة المخاطر وممارسات الحماية</li>
+          </ul>
+        </section>
+
+        <!-- ─── SECTION 4: General Director ─── -->
+        <section class="pd-sec" id="s4">
+          <div class="pd-sh">
+            <span class="pd-num">04</span>
+            <h2 data-en="General Director">المدير العام</h2>
+          </div>
+          <p
+            data-en="The General Director is the highest executive authority in ATTAA, directly accountable to the Board of Directors. The General Director provides overall leadership and ensures the organization delivers on its mandate.">
+            المدير العام هو أعلى سلطة تنفيذية في المنظمة، ويُساءل مباشرة أمام مجلس الإدارة. يوفر القيادة الشاملة ويضمن
+            تنفيذ المنظمة لولايتها.</p>
+          <div class="pd-two">
+            <div class="pd-sub card">
+              <h3><span>1</span><i style="font-style:normal" data-en="Leadership">القيادة</i></h3>
+              <p
+                data-en="Leads the organization's operations and staff, setting the culture, values, and organizational priorities across all departments and field operations.">
+                يقود عمليات المنظمة وموظفيها، ويرسّخ الثقافة والقيم والأولويات المؤسسية في جميع الأقسام والعمليات
+                الميدانية.</p>
+            </div>
+            <div class="pd-sub card">
+              <h3><span>2</span><i style="font-style:normal" data-en="External Representation">التمثيل الخارجي</i></h3>
+              <p
+                data-en="Represents ATTAA in dealings with government authorities, donors, partner organizations, and the broader humanitarian community.">
+                يمثّل المنظمة في التعاملات مع السلطات الحكومية والجهات المانحة والمنظمات الشريكة والمجتمع الإنساني
+                الأوسع.</p>
+            </div>
+          </div>
+          <div class="pd-note" style="margin-top:22px">
+            <b data-en="Internal Audit Relationship">العلاقة مع التدقيق الداخلي</b>
+            <p
+              data-en="The General Director works alongside an Internal Auditor who provides independent assurance on financial controls, compliance, and risk management. The Internal Auditor reports directly to the Board of Directors to preserve independence.">
+              يعمل المدير العام جنباً إلى جنب مع المدقق الداخلي الذي يوفر ضمانات مستقلة بشأن الضوابط المالية والامتثال
+              وإدارة المخاطر. يرفع المدقق الداخلي تقاريره مباشرةً إلى مجلس الإدارة للحفاظ على الاستقلالية.</p>
+          </div>
+        </section>
+
+        <!-- ─── SECTION 5: Program Sectors ─── -->
+        <section class="pd-sec" id="s5">
+          <div class="pd-sh">
+            <span class="pd-num">05</span>
+            <h2 data-en="Program Sectors">القطاعات البرامجية</h2>
+          </div>
+          <p
+            data-en="ATTAA operates across multiple humanitarian and development sectors. Each sector is led by a dedicated officer who is responsible for implementing programs, coordinating with partners, and reporting on outcomes.">
+            تعمل المنظمة في قطاعات إنسانية وتنموية متعددة. يقود كل قطاع ضابط مخصص مسؤول عن تنفيذ البرامج والتنسيق مع
+            الشركاء والإبلاغ عن النتائج.</p>
+          <ul class="pd-grid">
+            <li>
+              <span>🍎</span>
+              <p
+                data-en="<b>Nutrition Officer</b><br>Designs and implements nutrition programmes, monitors beneficiary health indicators, and coordinates with health facilities.">
+                <b>ضابط التغذية</b><br>يصمم برامج التغذية وينفذها، ويراقب مؤشرات صحة المستفيدين، وينسق مع المرافق
+                الصحية.
+              </p>
+            </li>
+            <li>
+              <span>💧</span>
+              <p
+                data-en="<b>WASH Officer</b><br>Oversees Water, Sanitation and Hygiene projects ensuring communities have access to safe water and sanitation services.">
+                <b>ضابط المياه والصرف والنظافة (WASH)</b><br>يشرف على مشاريع المياه والصرف الصحي والنظافة لضمان حصول
+                المجتمعات على المياه الآمنة وخدمات الصرف الصحي.
+              </p>
+            </li>
+            <li>
+              <span>🛡</span>
+              <p
+                data-en="<b>Protection Officer</b><br>Implements protection programmes, identifies vulnerable individuals, and links them to appropriate services and legal support.">
+                <b>ضابط الحماية</b><br>ينفّذ برامج الحماية، ويحدد الأفراد الضعفاء، ويربطهم بالخدمات المناسبة والدعم
+                القانوني.
+              </p>
+            </li>
+            <li>
+              <span>📚</span>
+              <p
+                data-en="<b>Education Officer</b><br>Manages education projects in emergencies and development contexts, supports schools and learning spaces.">
+                <b>ضابط التعليم</b><br>يدير مشاريع التعليم في سياقات الطوارئ والتنمية، ويدعم المدارس وأماكن التعلم.
+              </p>
+            </li>
+            <li>
+              <span>🌾</span>
+              <p
+                data-en="<b>FSL Officer (Food Security & Livelihoods)</b><br>Implements food security and livelihoods programmes, supporting households to achieve self-sufficiency.">
+                <b>ضابط الأمن الغذائي وسبل العيش (FSL)</b><br>ينفّذ برامج الأمن الغذائي وسبل العيش، ويدعم الأسر لتحقيق
+                الاكتفاء الذاتي.
+              </p>
+            </li>
+            <li>
+              <span>🏥</span>
+              <p
+                data-en="<b>Health Officer</b><br>Coordinates primary healthcare services, disease prevention campaigns, and community health outreach programmes.">
+                <b>ضابط الصحة</b><br>ينسّق خدمات الرعاية الصحية الأولية وحملات الوقاية من الأمراض وبرامج التوعية الصحية
+                المجتمعية.
+              </p>
+            </li>
+            <li>
+              <span>📊</span>
+              <p
+                data-en="<b>M&E Officer (Monitoring & Evaluation)</b><br>Designs monitoring frameworks, collects data, and evaluates programme effectiveness to ensure quality and accountability.">
+                <b>ضابط المتابعة والتقييم (M&E)</b><br>يصمم أطر المتابعة ويجمع البيانات ويقيّم فاعلية البرامج لضمان
+                الجودة والمساءلة.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- ─── SECTION 6: Support Functions ─── -->
+        <section class="pd-sec" id="s6">
+          <div class="pd-sh">
+            <span class="pd-num">06</span>
+            <h2 data-en="Support Functions">الوظائف الداعمة</h2>
+          </div>
+          <p
+            data-en="Support functions ensure the operational backbone of ATTAA runs efficiently. These include logistics, supply chain, administration, human resources, and finance.">
+            تضمن الوظائف الداعمة سير العمود الفقري التشغيلي للمنظمة بكفاءة. وتشمل اللوجستيات وسلسلة الإمداد والإدارة
+            والموارد البشرية والمالية.</p>
+          <div class="pd-two">
+            <div class="pd-sub card">
+              <h3><span>📦</span><i style="font-style:normal" data-en="Logistics & Supply">اللوجستيات والإمداد</i></h3>
+              <p
+                data-en="The Logistics Officer coordinates transportation, warehousing, and asset management. The Supply Officer manages procurement processes, ensuring value for money and compliance with donor requirements.">
+                ينسّق ضابط اللوجستيات النقل والتخزين وإدارة الأصول. يدير ضابط الإمداد عمليات الشراء، ويضمن القيمة مقابل
+                المال والامتثال لمتطلبات الجهات المانحة.</p>
+            </div>
+            <div class="pd-sub card">
+              <h3><span>👥</span><i style="font-style:normal" data-en="Human Resources">الموارد البشرية</i></h3>
+              <p
+                data-en="HR Officers manage recruitment, staff contracts, performance reviews, training, and employee welfare. Volunteers are coordinated through the HR department.">
+                يدير ضباط الموارد البشرية التوظيف وعقود الموظفين ومراجعات الأداء والتدريب ورفاهية الموظفين. يتم تنسيق
+                المتطوعين من خلال قسم الموارد البشرية.</p>
+            </div>
+          </div>
+          <div class="pd-sub" style="margin-top:22px">
+            <h3><span>💰</span><i style="font-style:normal" data-en="Finance Department">القسم المالي</i></h3>
+            <p data-en="The Finance department is composed of:">يتكوّن القسم المالي من:</p>
+            <ul class="pd-grid">
+              <li>
+                <span>1</span>
+                <p
+                  data-en="<b>Finance Officer</b> — Oversees all financial transactions, budget tracking, and financial reporting.">
+                  <b>ضابط المالية</b> — يشرف على جميع المعاملات المالية وتتبع الميزانية والتقارير المالية.
+                </p>
+              </li>
+              <li>
+                <span>2</span>
+                <p data-en="<b>Cashier</b> — Manages petty cash, disbursements, and day-to-day cash transactions.">
+                  <b>أمين الصندوق</b> — يدير النقدية الصغيرة والمدفوعات والمعاملات النقدية اليومية.
+                </p>
+              </li>
+              <li>
+                <span>3</span>
+                <p
+                  data-en="<b>Accountant</b> — Maintains financial records, prepares accounts, and ensures accurate bookkeeping.">
+                  <b>المحاسب</b> — يحتفظ بالسجلات المالية ويُعدّ الحسابات ويضمن دقة الدفاتر.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="pd-sub" style="margin-top:22px">
+            <h3><span>🏢</span><i style="font-style:normal" data-en="Administrative Officers">الضباط الإداريون</i></h3>
+            <p
+              data-en="Administrative Officers ensure the smooth running of office operations, document management, correspondence, and general administrative support across all ATTAA offices.">
+              يضمن الضباط الإداريون سير العمليات المكتبية وإدارة الوثائق والمراسلات والدعم الإداري العام في جميع مكاتب
+              المنظمة.</p>
+          </div>
+        </section>
+
+        <!-- ─── SECTION 7: Management Team ─── -->
+        <section class="pd-sec" id="s7">
+          <div class="pd-sh">
+            <span class="pd-num">07</span>
+            <h2 data-en="Management Team">فريق الإدارة</h2>
+          </div>
+          <p
+            data-en="ATTAA operates a professional management team that bridges strategic leadership and field operations. Each manager is responsible for a specific functional area.">
+            تعمل المنظمة بفريق إدارة احترافي يجسر بين القيادة الاستراتيجية والعمليات الميدانية. كل مدير مسؤول عن مجال
+            وظيفي محدد.</p>
+          <ul class="pd-list">
+            <li
+              data-en="<b>Area Managers</b> — Oversee all operations within a defined geographic area, coordinate with field officers, and report to the General Director.">
+              <b>مديرو المناطق</b> — يشرفون على جميع العمليات ضمن منطقة جغرافية محددة، وينسّقون مع الضباط الميدانيين،
+              ويرفعون تقاريرهم للمدير العام.
+            </li>
+            <li
+              data-en="<b>HR Manager</b> — Leads the human resources department, ensures staff policies are implemented, and promotes a healthy workplace culture.">
+              <b>مدير الموارد البشرية</b> — يقود قسم الموارد البشرية، ويضمن تطبيق سياسات الموظفين، ويعزز ثقافة بيئة عمل
+              صحية.
+            </li>
+            <li
+              data-en="<b>Admin Manager</b> — Oversees administrative systems, office management, and regulatory compliance.">
+              <b>المدير الإداري</b> — يشرف على الأنظمة الإدارية وإدارة المكاتب والامتثال التنظيمي.
+            </li>
+            <li
+              data-en="<b>MEAL Manager (Monitoring, Evaluation, Accountability & Learning)</b> — Leads the MEAL function, ensuring quality programming through evidence-based decision making.">
+              <b>مدير المتابعة والتقييم والمساءلة والتعلم (MEAL)</b> — يقود وظيفة MEAL، ويضمن برمجة عالية الجودة من خلال
+              صنع القرار المبني على الأدلة.
+            </li>
+            <li
+              data-en="<b>Logistics Manager</b> — Manages the logistics department, supply chain, fleet management, and warehousing operations.">
+              <b>مدير اللوجستيات</b> — يدير قسم اللوجستيات وسلسلة الإمداد وإدارة الأسطول وعمليات التخزين.
+            </li>
+            <li
+              data-en="<b>Program Manager</b> — Coordinates the implementation of all programme activities, ensures quality delivery and donor reporting.">
+              <b>مدير البرنامج</b> — ينسّق تنفيذ جميع أنشطة البرامج، ويضمن التقديم عالي الجودة وتقارير الجهات المانحة.
+            </li>
+            <li
+              data-en="<b>Development Manager</b> — Leads resource mobilization, proposal writing, and partnership development.">
+              <b>مدير التطوير</b> — يقود تعبئة الموارد وكتابة المقترحات وتطوير الشراكات.
+            </li>
+            <li
+              data-en="<b>Emergency Manager</b> — Coordinates emergency response operations, rapid assessments, and humanitarian interventions.">
+              <b>مدير الطوارئ</b> — ينسّق عمليات الاستجابة للطوارئ والتقييمات السريعة والتدخلات الإنسانية.
+            </li>
+            <li
+              data-en="<b>Finance Manager</b> — Provides overall financial management, budgeting, financial risk management and donor financial compliance.">
+              <b>المدير المالي</b> — يوفر الإدارة المالية الشاملة والميزانية وإدارة المخاطر المالية والامتثال المالي
+              للجهات المانحة.
+            </li>
+          </ul>
+        </section>
+
+        <!-- ─── SECTION 8: Org Chart ─── -->
+        <section class="pd-sec" id="s8">
+          <div class="pd-sh">
+            <span class="pd-num">08</span>
+            <h2 data-en="Organizational Chart">الهيكل التنظيمي</h2>
+          </div>
+          <p
+            data-en="The following chart illustrates the full organizational structure of Attaa Organization for Peace and Development, as documented in the official governance policy.">
+            يُوضّح الهيكل التالي البنية التنظيمية الكاملة لمنظمة عطاء للسلام والتنمية، كما هو موثق في سياسة الحوكمة
+            الرسمية.</p>
+
+          <div class="gov-chart">
+            <div class="gov-chart-inner">
+
+              <!-- Level 1: General Assembly -->
+              <div class="org-level">
+                <div class="org-branch">
+                  <div class="org-box tier1" data-en="General Assembly">الجمعية العمومية<br><small
+                      style="font-size:11px;opacity:.8">General Assembly</small></div>
+                  <div class="org-connector-v"></div>
+                </div>
+              </div>
+
+              <!-- Level 2: Board of Directors -->
+              <div class="org-level">
+                <div class="org-branch">
+                  <div class="org-box tier2" data-en="Board of Directors">مجلس الإدارة<br><small
+                      style="font-size:11px;color:#12388a">Board of Directors</small></div>
+                  <div class="org-connector-v"></div>
+                </div>
+              </div>
+
+              <!-- Level 3: General Director + Internal Auditor (side by side) -->
+              <div style="display:flex;justify-content:center;gap:30px;align-items:flex-start">
+                <div class="org-branch">
+                  <div class="org-box tier2" style="min-width:160px" data-en="General Director">المدير العام<br><small
+                      style="font-size:11px;color:#12388a">General Director</small></div>
+                  <div class="org-connector-v"></div>
+                </div>
+                <div class="org-branch" style="margin-top:0">
+                  <div class="org-box tier3" style="min-width:150px;margin-top:0" data-en="Internal Auditor">المدقق
+                    الداخلي<br><small style="font-size:11px;color:#4c5b78">Internal Auditor</small></div>
+                </div>
+              </div>
+
+              <!-- Horizontal line then children -->
+              <div style="position:relative;display:flex;justify-content:center">
+                <div style="position:absolute;top:0;left:8%;right:8%;height:2px;background:#c5d3e8"></div>
+              </div>
+
+              <!-- Level 5: All officers + managers row -->
+              <div class="org-horiz-line" style="margin-top:2px;padding-top:0;gap:10px">
+
+                <!-- HR Officers + Volunteers -->
+                <div class="org-horiz-child">
+                  <div class="org-connector-v"></div>
+                  <div class="org-box tier3" data-en="HR Officers">ضباط الموارد البشرية<br><small
+                      style="font-size:11px">HR Officers</small></div>
+                  <div class="org-connector-v" style="height:10px"></div>
+                  <div class="org-box tier4" data-en="Volunteers">متطوعون<br><small
+                      style="font-size:10px">Volunteers</small></div>
+                </div>
+
+                <!-- Nutrition Officer -->
+                <div class="org-horiz-child">
+                  <div class="org-connector-v"></div>
+                  <div class="org-box tier4" data-en="Nutrition Officer">ضابط التغذية<br><small
+                      style="font-size:10px">Nutrition Officer</small></div>
+                </div>
+
+                <!-- WASH Officer -->
+                <div class="org-horiz-child">
+                  <div class="org-connector-v"></div>
+                  <div class="org-box tier4" data-en="WASH Officer">ضابط المياه والصرف<br><small
+                      style="font-size:10px">WASH Officer</small></div>
+                </div>
+
+                <!-- Protection Officer -->
+                <div class="org-horiz-child">
+                  <div class="org-connector-v"></div>
+                  <div class="org-box tier4" data-en="Protection Officer">ضابط الحماية<br><small
+                      style="font-size:10px">Protection Officer</small></div>
+                </div>
+
+                <!-- Education Officer -->
+                <div class="org-horiz-child">
+                  <div class="org-connector-v"></div>
+                  <div class="org-box tier4" data-en="Education Officer">ضابط التعليم<br><small
+                      style="font-size:10px">Education Officer</small></div>
+                </div>
+
+                <!-- FSL Officer -->
+                <div class="org-horiz-child">
+                  <div class="org-connector-v"></div>
+                  <div class="org-box tier4" data-en="FSL Officer">ضابط الأمن الغذائي<br><small
+                      style="font-size:10px">FSL Officer</small></div>
+                </div>
+
+                <!-- Health Officer -->
+                <div class="org-horiz-child">
+                  <div class="org-connector-v"></div>
+                  <div class="org-box tier4" data-en="Health Officer">ضابط الصحة<br><small style="font-size:10px">Health
+                      Officer</small></div>
+                </div>
+
+                <!-- M&E Officer -->
+                <div class="org-horiz-child">
+                  <div class="org-connector-v"></div>
+                  <div class="org-box tier4" data-en="M&E Officer">ضابط المتابعة والتقييم<br><small
+                      style="font-size:10px">M&amp;E Officer</small></div>
+                </div>
+
+                <!-- Logistics Officer -->
+                <div class="org-horiz-child">
+                  <div class="org-connector-v"></div>
+                  <div class="org-box tier4" data-en="Logistics Officer">ضابط اللوجستيات<br><small
+                      style="font-size:10px">Logistic Officer</small></div>
+                </div>
+
+                <!-- Supply Officer -->
+                <div class="org-horiz-child">
+                  <div class="org-connector-v"></div>
+                  <div class="org-box tier4" data-en="Supply Officer">ضابط الإمداد<br><small
+                      style="font-size:10px">Supply Officer</small></div>
+                </div>
+
+                <!-- Administrative Officers -->
+                <div class="org-horiz-child">
+                  <div class="org-connector-v"></div>
+                  <div class="org-box tier4" data-en="Administrative Officers">الضباط الإداريون<br><small
+                      style="font-size:10px">Administrative Officers</small></div>
+                </div>
+
+                <!-- Finance Officer group -->
+                <div class="org-horiz-child">
+                  <div class="org-connector-v"></div>
+                  <div class="org-box tier4 finance" data-en="Finance Officer">ضابط المالية<br><small
+                      style="font-size:10px">Finance Officer</small></div>
+                  <div class="org-connector-v" style="height:10px"></div>
+                  <div style="display:flex;gap:8px">
+                    <div class="org-box tier4 finance" style="min-width:75px;font-size:11.5px" data-en="Cashier">أمين
+                      الصندوق<br><small style="font-size:9.5px">Cashier</small></div>
+                    <div class="org-box tier4 finance" style="min-width:75px;font-size:11.5px" data-en="Accountant">
+                      محاسب<br><small style="font-size:9.5px">Accountant</small></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Connector to managers -->
+              <div class="org-connector-v" style="height:28px;margin-top:10px"></div>
+
+              <!-- Management row label -->
+              <div style="text-align:center;margin-bottom:8px">
+                <span
+                  style="font-size:12px;color:#888;font-weight:600;letter-spacing:1px;font-family:'Inter',sans-serif"
+                  data-en="MANAGEMENT TEAM">فريق الإدارة — MANAGEMENT TEAM</span>
+              </div>
+
+              <!-- Level: Managers -->
+              <div class="org-wide-row" style="gap:10px">
+                <div class="org-box tier4 area" data-en="Area Managers">مديرو المناطق<br><small
+                    style="font-size:10px">Area Managers</small></div>
+                <div class="org-box tier4 area" data-en="HR Manager">مدير الموارد البشرية<br><small
+                    style="font-size:10px">HR Manager</small></div>
+                <div class="org-box tier4 area" data-en="Admin">المدير الإداري<br><small
+                    style="font-size:10px">Admin</small></div>
+                <div class="org-box tier4 area" data-en="MEAL Manager">مدير MEAL<br><small style="font-size:10px">Meal
+                    Manager</small></div>
+                <div class="org-box tier4 area" data-en="Logistics Manager">مدير اللوجستيات<br><small
+                    style="font-size:10px">Logistic Manager</small></div>
+                <div class="org-box tier4 area" data-en="Program Manager">مدير البرنامج<br><small
+                    style="font-size:10px">Program Manager</small></div>
+                <div class="org-box tier4 area" data-en="Development Manager">مدير التطوير<br><small
+                    style="font-size:10px">Development Manager</small></div>
+                <div class="org-box tier4 area" data-en="Emergency Manager">مدير الطوارئ<br><small
+                    style="font-size:10px">Emergency Manager</small></div>
+                <div class="org-box tier4 finance" data-en="Finance Manager">المدير المالي<br><small
+                    style="font-size:10px">Finance Manager</small></div>
+              </div>
+
+            </div><!-- /gov-chart-inner -->
+          </div><!-- /gov-chart -->
+
+          <div class="pd-note">
+            <b data-en="Document Source">مصدر الوثيقة</b>
+            <p
+              data-en="This organizational chart is extracted directly from the official governance document: 'The Governance Structure of Giving Organization of Peace and Development', as approved by the General Assembly.">
+              هذا الهيكل التنظيمي مستخرج مباشرة من وثيقة الحوكمة الرسمية: «الهيكل التنظيمي لمنظمة عطاء للسلام والتنمية»،
+              كما اعتمدتها الجمعية العمومية.</p>
+          </div>
+        </section>
+
+        <!-- END-OF-PAGE BACK BLOCK -->
+        <div class="pd-endback">
+          <div>
+            <b data-en="Policy Library">مكتبة السياسات</b>
+            <p data-en="Return to all approved institutional policies and documents.">العودة إلى جميع السياسات والوثائق
+              المؤسسية المعتمدة.</p>
+          </div>
+          <a href="policies.html#library" class="btn">
+            <svg viewBox="0 0 24 24" width="18" height="18">
+              <path d="M19 12H5M11 6l-6 6 6 6" />
+            </svg>
+            <span data-en="Back to all policies">العودة إلى كل السياسات</span>
+          </a>
+        </div>
+
+        <!-- Sign-off -->
+        <div class="pd-sign">
+          <div class="pd-sign-t">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
+              <path d="M8.5 12l2.5 2.5 4.5-5" />
+            </svg>
+            <span data-en="Document endorsement">اعتماد الوثيقة</span>
+          </div>
+          <dl>
+            <div>
+              <dt data-en="Approved by">اعتمدت من قِبل</dt>
+              <dd data-en="General Assembly">الجمعية العمومية</dd>
+            </div>
+            <div>
+              <dt data-en="Organization">المنظمة</dt>
+              <dd data-en="Attaa Organization for Peace and Development">منظمة عطاء للسلام والتنمية</dd>
+            </div>
+            <div>
+              <dt data-en="Registration">التسجيل</dt>
+              <dd>HAC No. 623/2024</dd>
+            </div>
+          </dl>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <div class="pol-end"></div>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="fgrid">
+        <div class="f-brand">
+          <a href="index.html" class="brand">
+            <img src="images/logo.jpg" alt="ATTAA logo">
+            <span class="brand-text">
+              <span class="brand-name" data-en="Attaa Organization">منظمة عطاء</span>
+              <span class="brand-sub" data-en="for Peace and Development">للسلام والتنمية</span>
+            </span>
+          </a>
+          <p
+            data-en="We work with Sudanese communities to build a safe, stable and productive homeland that preserves everyone's dignity.">
+            نعمل مع المجتمعات السودانية لبناء وطن آمن ومستقر ومنتج يحفظ كرامة الجميع.</p>
+        <p class="f-reg" data-en="ATTAA Organization for Peace and Development was established as a community-based organization (CBO) in 2019 in Sinnar State and was registered federally with the Humanitarian Aid Commission in Port Sudan in 2024 under the Humanitarian Work Law of 2006, as a national organization (NGOs) under No. 623/2024.">تأسست منظمة عطاء للسلام والتنمية كمنظمة قاعدية (CBO) في العام 2019 بولاية سنار، وتم تسجيلها اتحادياً بمفوضية العون الإنساني ببورتسودان في العام 2024 تحت قوانين العمل الإنساني للعام 2006، كمنظمة وطنية (NGOs) تحت الرقم 623/2024.</p>
+          <small>HAC Registration No. 623/2024</small>
+        </div>
+
+        <div>
+          <h4 data-en="Quick links">روابط سريعة</h4>
+          <ul>
+            <li><a href="policies.html" data-en="Policies & Governance">السياسات والحوكمة</a></li>
+            <li><a href="accountability.html" data-en="Accountability & Complaints">المساءلة والشكاوى</a></li>
+            <li><a href="reports.html" data-en="Annual Reports">التقارير السنوية</a></li>
+            <li><a href="jobs.html" data-en="Jobs & Membership">الوظائف والعضوية</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 data-en="Contact us">اتصل بنا</h4>
+          <ul>
+            <li data-en="Khartoum, Sudan">الخرطوم، السودان</li>
+            <li data-en="State offices - Sennar">مكاتب الولايات — سنار</li>
+            <li><a href="mailto:info@attaa.org" style="font-family:Inter,sans-serif">info@attaa.org</a></li>
+            <li data-en="Complaint boxes checked weekly">صناديق الشكاوى تُفحص أسبوعياً</li>
+          </ul>
+        </div>
+
+        <div class="report-box" id="report">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
+            <path d="M8.5 12l2.5 2.5 4.5-5" />
+          </svg>
+          <h4 data-en="Have a report?">لديك بلاغ؟</h4>
+          <p
+            data-en="We guarantee confidentiality and protection from retaliation for reports submitted in good faith.">
+            نضمن السرية والحماية من الانتقام للبلاغات المقدمة بحسن نية.</p>
+          <a href="accountability.html" data-en="Go to the accountability portal">اذهب إلى بوابة المساءلة</a>
+        </div>
+      </div>
+
+      <div class="fbottom">
+        <span data-en="© 2025 Attaa Organization for Peace and Development. All rights reserved.">© 2025 منظمة عطاء
+          للسلام والتنمية. جميع الحقوق محفوظة.</span>
+        <span><a href="#" data-en="Privacy">الخصوصية</a> · <a href="#" data-en="Terms of use">شروط الاستخدام</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    /* Reading progress bar */
+    (function () {
+      var bar = document.getElementById('pdBar');
+      window.addEventListener('scroll', function () {
+        var h = document.documentElement;
+        var pct = h.scrollTop / (h.scrollHeight - h.clientHeight) * 100;
+        bar.style.width = pct + '%';
+      });
+    })();
+
+    /* Active TOC link */
+    (function () {
+      var secs = document.querySelectorAll('.pd-sec');
+      var links = document.querySelectorAll('.pd-toc a[href^="#s"]');
+      if (!secs.length || !links.length) return;
+
+      function updateActiveToc() {
+        var header = document.querySelector('.header');
+        var offset = header ? header.offsetHeight + 24 : 120;
+        var refY = window.innerHeight * 0.35 + offset;
+        var cur = '';
+
+        secs.forEach(function (s) {
+          if (s.getBoundingClientRect().top <= refY) cur = s.id;
+        });
+
+        links.forEach(function (l) {
+          l.classList.toggle('on', l.getAttribute('href') === '#' + cur);
+        });
+      }
+
+      updateActiveToc();
+      window.addEventListener('scroll', updateActiveToc, { passive: true });
+      window.addEventListener('load', updateActiveToc);
+    })();
+  </script>
+<script src="protect.js"></script>
+</body>
+
+</html>

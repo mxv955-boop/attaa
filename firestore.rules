@@ -1,0 +1,69 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /reports/{reportId} {
+      allow create: if request.resource.data.keys().hasAll([
+        'type',
+        'details',
+        'date',
+        'anonymous',
+        'state',
+        'locality',
+        'attachments',
+        'createdAt'
+      ])
+      && request.resource.data.type is string
+      && request.resource.data.details is string
+      && request.resource.data.date is string
+      && request.resource.data.anonymous is bool
+      && request.resource.data.state is string
+      && request.resource.data.locality is string
+      && request.resource.data.attachments is list
+      && request.resource.data.createdAt is timestamp;
+
+      allow read, update, delete: if false;
+    }
+
+    match /volunteers/{volunteerId} {
+      allow create: if request.resource.data.keys().hasAll([
+        'fullName',
+        'email',
+        'phone',
+        'location',
+        'field',
+        'hours',
+        'workType',
+        'motivation',
+        'createdAt'
+      ])
+      && request.resource.data.fullName is string
+      && request.resource.data.email is string
+      && request.resource.data.phone is string
+      && request.resource.data.location is string
+      && request.resource.data.field is string
+      && request.resource.data.hours is string
+      && request.resource.data.workType is string
+      && request.resource.data.motivation is string
+      && request.resource.data.createdAt is timestamp;
+
+      allow read, update, delete: if false;
+    }
+
+    match /donations/{donationId} {
+      allow create: if request.resource.data.keys().hasAll([
+        'code', 'amount', 'currency', 'frequency', 'method',
+        'firstName', 'lastName', 'email', 'phone',
+        'reference', 'receipt', 'status', 'createdAt'
+      ])
+      && request.resource.data.amount is number
+      && request.resource.data.amount >= 1
+      && request.resource.data.frequency in ['monthly', 'once']
+      && request.resource.data.method in ['bankak', 'fawry', 'ocash']
+      && request.resource.data.status == 'pending'
+      && request.resource.data.receipt is map
+      && request.resource.data.createdAt is timestamp;
+
+      allow read, update, delete: if false;
+    }
+  }
+}

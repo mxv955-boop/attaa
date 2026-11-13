@@ -1,0 +1,674 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="تعرّف على منظمة عطاء للسلام والتنمية: رؤيتنا ورسالتنا وهيكلنا التنظيمي ومنظومة الحوكمة والمساءلة.">
+<title>من نحن والحوكمة | منظمة عطاء للسلام والتنمية</title>
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@500;700;800&family=Noto+Sans+Arabic:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── PROFILE INTRO CARD ──────────────────────────────────── */
+.profile-intro {
+  background: #fff;
+  border: 1px solid var(--line, #e2e8f0);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  margin: 2.5rem 0 1.5rem;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  box-shadow: 0 2px 16px rgba(26,60,100,.07);
+}
+.profile-intro .pi-logo {
+  flex-shrink: 0;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--green, #2ea87e);
+  box-shadow: 0 4px 16px rgba(46,168,126,.18);
+}
+.profile-intro .pi-body { flex: 1; min-width: 0; }
+.pi-tag {
+  display: inline-block;
+  background: var(--green, #2ea87e);
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  padding: .25rem .75rem;
+  border-radius: 999px;
+  margin-bottom: .75rem;
+  text-transform: uppercase;
+}
+.pi-name {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--navy, #1a3c64);
+  margin: 0 0 .5rem;
+  line-height: 1.3;
+}
+.pi-tagline {
+  font-size: .95rem;
+  color: #5a7a9a;
+  margin: 0 0 1rem;
+  line-height: 1.7;
+}
+.pi-teaser {
+  font-size: .92rem;
+  color: var(--ink, #2d3748);
+  line-height: 1.85;
+  margin: 0 0 1.25rem;
+}
+.btn-readmore {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  background: var(--navy, #1a3c64);
+  color: #fff;
+  font-size: .88rem;
+  font-weight: 600;
+  padding: .6rem 1.4rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background .2s, transform .15s;
+  font-family: inherit;
+}
+.btn-readmore:hover { background: var(--green, #2ea87e); transform: translateY(-1px); }
+.btn-readmore svg {
+  width: 16px; height: 16px; stroke: #fff; fill: none;
+  stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* ── FULL PROFILE SECTION ────────────────────────────────── */
+#profileFull { display: none; }
+#profileFull.open { display: block; }
+
+.pf-wrap {
+  background: #fff;
+  border: 1px solid var(--line, #e2e8f0);
+  border-radius: 16px;
+  padding: 2.5rem 2.5rem 2rem;
+  margin: 0 0 2rem;
+  box-shadow: 0 2px 20px rgba(26,60,100,.07);
+  animation: fadeSlide .35s ease;
+}
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.pf-heading {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--navy, #1a3c64);
+  margin: 1.6rem 0 .6rem;
+  padding-bottom: .4rem;
+  border-bottom: 2px solid var(--green, #2ea87e);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.pf-heading::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--green, #2ea87e);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.pf-text {
+  font-size: .93rem;
+  color: var(--ink, #2d3748);
+  line-height: 1.9;
+  margin: 0 0 .8rem;
+}
+.pf-list {
+  list-style: none;
+  padding: 0; margin: 0 0 .8rem;
+}
+.pf-list li {
+  font-size: .93rem;
+  color: var(--ink, #2d3748);
+  line-height: 1.85;
+  padding: .35rem 0 .35rem 1.4rem;
+  position: relative;
+}
+html[dir="rtl"] .pf-list li { padding: .35rem 1.4rem .35rem 0; }
+.pf-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: .82rem;
+  width: 7px; height: 7px;
+  background: var(--green, #2ea87e);
+  border-radius: 50%;
+}
+html[dir="rtl"] .pf-list li::before { left: auto; right: 0; }
+
+.pf-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: .5rem 0 1rem;
+}
+.pf-card {
+  background: var(--bg-soft, #f7f9fc);
+  border: 1px solid var(--line, #e2e8f0);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+}
+.pf-card .pf-card-title {
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--green, #2ea87e);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: .4rem;
+}
+.pf-card p {
+  font-size: .88rem;
+  color: var(--ink, #2d3748);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.pf-divider {
+  border: none;
+  border-top: 1px solid var(--line, #e2e8f0);
+  margin: 1.5rem 0;
+}
+
+.pf-principles {
+  background: linear-gradient(135deg, #eaf4f0 0%, #e8eef6 100%);
+  border-radius: 12px;
+  padding: 1.2rem 1.4rem;
+  margin: .5rem 0 1rem;
+}
+.pf-principles .pf-text { margin: 0 0 .5rem; }
+.pf-principles .pf-list { margin: 0; }
+
+.btn-close-profile {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  background: transparent;
+  border: 2px solid var(--navy, #1a3c64);
+  color: var(--navy, #1a3c64);
+  font-size: .88rem;
+  font-weight: 600;
+  padding: .6rem 1.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background .2s, color .2s;
+  margin-top: 1.2rem;
+}
+.btn-close-profile:hover {
+  background: var(--navy, #1a3c64);
+  color: #fff;
+}
+.btn-close-profile svg {
+  width: 15px; height: 15px; stroke: currentColor; fill: none;
+  stroke-width: 2.2; stroke-linecap: round;
+}
+
+@media (max-width: 600px) {
+  .profile-intro { flex-direction: column; align-items: center; text-align: center; }
+  html[dir="ltr"] .profile-intro { text-align: left; }
+  .pf-grid { grid-template-columns: 1fr; }
+  .pf-wrap { padding: 1.5rem 1rem; }
+}
+
+/* ── About page-hero image blend ────────────── */
+.page-hero {
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='none' stroke='%23ffffff' stroke-opacity='.07'/%3E%3Ccircle cx='30' cy='30' r='3' fill='%23ffffff' fill-opacity='.06'/%3E%3C/svg%3E"),
+    radial-gradient(circle at 50% 20%, rgba(76,175,31,.22), transparent 50%),
+    linear-gradient(135deg, #0b2a63 0%, #1a3c64 55%, #1f6f5a 100%) !important;
+  min-height: 460px !important;
+  position: relative !important;
+}
+.page-hero .container { position: relative; z-index: 2; }
+.ph-badge{flex:0 0 330px;width:330px;filter:drop-shadow(0 12px 30px rgba(0,0,0,.35));}
+.ph-badge svg { width:100%; height:auto; display:block; }
+@media (max-width:900px){.page-hero .container{flex-direction:column !important;align-items:stretch !important;gap:28px !important}.ph-badge{display:flex !important;flex:0 0 auto;width:100%;max-width:260px;margin:0 auto}.ph-badge svg{width:100%;height:auto}}
+.page-hero .container{display:flex !important;flex-direction:row !important;align-items:center !important;justify-content:space-between !important;gap:48px}
+.ph-text{flex:1 1 auto;min-width:0}
+.ph-text .desc{margin-top:22px;max-width:560px}
+
+/* ── About Banner Image ─────────────────────── */
+.about-banner {
+  width: 100%;
+  height: 380px;
+  background-image: url('images/about-2.jpg');
+  background-size: cover;
+  background-position: center 40%;
+  background-attachment: fixed;
+  position: relative;
+  margin: 2rem 0;
+  border-radius: 18px;
+  overflow: hidden;
+}
+.about-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    rgba(26,60,100,.80) 0%,
+    rgba(26,60,100,.50) 55%,
+    rgba(46,168,126,.42) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+.about-banner-text {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-size: clamp(1.15rem, 2.8vw, 1.75rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.65;
+  margin: 0 0 .9rem;
+  max-width: 700px;
+  text-shadow: 0 2px 12px rgba(0,0,0,.3);
+}
+.about-banner-cite {
+  font-size: .82rem;
+  font-weight: 500;
+  color: rgba(255,255,255,.75);
+  letter-spacing: .06em;
+  border-top: 1px solid rgba(255,255,255,.3);
+  padding-top: .55rem;
+}
+@media (max-width: 600px) {
+  .about-banner { height: 280px; background-attachment: scroll; border-radius: 12px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <span data-en="Non-governmental, non-profit national organization">منظمة وطنية غير حكومية وغير ربحية</span>
+    <span data-en="Registered with the Humanitarian Aid Commission — No. 623/2024">مسجلة لدى مفوضية العون الإنساني — رقم 623/2024</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="images/logo.jpg" alt="ATTAA logo">
+      <span class="brand-text">
+        <span class="brand-name" data-en="Attaa Organization">منظمة عطاء</span>
+        <span class="brand-sub" data-en="for Peace and Development">للسلام والتنمية</span>
+      </span>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html" data-en="Home">الرئيسية</a>
+      <a href="about.html" class="active" data-en="About Us">من نحن</a>
+      <a href="programs.html" data-en="Programs">البرامج</a>
+      <a href="policies.html" data-en="Policies">السياسات</a>
+      <a href="accountability.html" data-en="Accountability">المساءلة</a>
+      <a href="reports.html" data-en="Reports">التقارير</a>
+      <a href="jobs.html" data-en="Jobs">الوظائف</a>
+      <a href="contact.html" data-en="Contact Us">اتصل بنا</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="lang" id="langBtn" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="8"></circle>
+          <path d="M4 12h16M12 4a13.5 13.5 0 010 16M12 4a13.5 13.5 0 000 16"></path>
+        </svg>
+        <span>EN</span>
+      </button>
+      <a href="donate.html" class="btn btn-green btn-sm" data-en="Donate">تبرّع</a>
+      <a href="volunteer.html" class="btn btn-light btn-sm btn-vol" data-en="Volunteer">تطوّع</a>
+      <a href="accountability.html#form" class="btn btn-navy">
+        <span data-en="Safe Report">إبلاغ آمن</span>
+        <svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="container">
+    <div class="ph-text">
+    <div>
+      <div class="label" data-en="Institution">المؤسسة</div>
+      <h1 data-en="About Us &amp; Governance">من نحن والحوكمة</h1>
+      <div class="en-sub" data-en="عن عطاء والحوكمة">ABOUT ATTAA &amp; GOVERNANCE</div>
+    </div>
+    <p class="desc" data-en="Our decisions are made within a clear structure that distributes responsibilities, strengthens oversight, and protects the organization's independence and accountability to communities.">تتخذ قراراتنا ضمن هيكل واضح يوزع المسؤوليات، ويعزز الرقابة، ويحفظ استقلال المنظمة ومساءلتها أمام المجتمعات.</p>
+    </div>
+    <div class="ph-badge"><svg class="ph-art" viewBox="0 0 360 250" role="img" aria-label="Governance structure diagram" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#fff" stroke-opacity=".55" stroke-width="2">
+      <path d="M180 52 C180 80 70 72 70 92"/><path d="M180 52 L180 90"/><path d="M180 52 C180 80 290 72 290 92"/>
+      <path d="M70 120 C70 150 30 140 30 178"/><path d="M70 120 C70 150 100 140 100 178"/>
+      <path d="M180 120 C180 150 145 140 145 178"/><path d="M180 120 C180 150 215 140 215 178"/>
+      <path d="M290 120 C290 150 260 140 260 178"/><path d="M290 120 C290 150 330 140 330 178"/>
+    </g>
+    <circle cx="180" cy="30" r="36" stroke="#8fe36f" stroke-opacity=".5" stroke-dasharray="4 6" stroke-width="1.5"/>
+    <circle cx="180" cy="30" r="22" fill="#4caf1f" stroke="#fff" stroke-width="2.5"/>
+    <path d="M180 18l11 4v8c0 7-5 11-11 13-6-2-11-6-11-13v-8z" stroke="#fff" stroke-width="2.2"/><path d="M175 30l4 4 7-8" stroke="#fff" stroke-width="2.2"/>
+    <g fill="#0b2a63" stroke="#fff" stroke-width="2.5"><circle cx="70" cy="106" r="16"/><circle cx="180" cy="106" r="16"/><circle cx="290" cy="106" r="16"/></g>
+    <g stroke="#8fe36f" stroke-width="2.2"><circle cx="70" cy="106" r="5" fill="#8fe36f"/><circle cx="180" cy="106" r="5" fill="#8fe36f"/><circle cx="290" cy="106" r="5" fill="#8fe36f"/></g>
+    <g fill="#fff" fill-opacity=".92" stroke="#fff" stroke-width="1"><circle cx="30" cy="194" r="11"/><circle cx="100" cy="194" r="11"/><circle cx="145" cy="194" r="11"/><circle cx="215" cy="194" r="11"/><circle cx="260" cy="194" r="11"/><circle cx="330" cy="194" r="11"/></g>
+    <g fill="#4caf1f"><circle cx="30" cy="194" r="4.5"/><circle cx="100" cy="194" r="4.5"/><circle cx="145" cy="194" r="4.5"/><circle cx="215" cy="194" r="4.5"/><circle cx="260" cy="194" r="4.5"/><circle cx="330" cy="194" r="4.5"/></g>
+  </svg></div>
+  </div>
+</section>
+
+<main class="container">
+
+  <!-- FACTS -->
+  <div class="facts">
+    <div class="fact"><small data-en="Founded in">تأسست في</small><b>2019</b></div>
+    <div class="fact"><small data-en="Registration No.">رقم التسجيل</small><b>623/2024</b></div>
+    <div class="fact"><small data-en="Headquarters">المقر الرئيسي</small><b data-en="Khartoum">الخرطوم</b></div>
+    <div class="fact"><small data-en="Official languages">اللغات الرسمية</small><b data-en="Arabic and English">العربية والإنجليزية</b></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       PROFILE INTRO CARD
+  ══════════════════════════════════════════ -->
+  <div class="profile-intro">
+    <img src="images/logo.jpg" alt="ATTAA logo" class="pi-logo">
+    <div class="pi-body">
+      <span class="pi-tag" data-en="Organization Profile">ملف المنظمة</span>
+      <h2 class="pi-name" data-en="Giving Organization for Peace and Development (ATTAA)">منظمة عطاء للسلام والتنمية</h2>
+      <p class="pi-tagline" data-en="Sudan of one Nation, safe, stable and developing.">السودان وطن واحد، آمن، مستقر ومتطور.</p>
+      <p class="pi-teaser" data-en="ATTAA Organization for Peace and Development was established as a community-based organization (CBO) in 2019 in Sinnar State and was registered federally with the Humanitarian Aid Commission in Port Sudan in 2024 under the Humanitarian Work Law of 2006, as a national organization (NGOs) under No. 623/2024.">تأسست منظمة عطاء للسلام والتنمية كمنظمة قاعدية (CBO) في العام 2019 بولاية سنار، وتم تسجيلها اتحادياً بمفوضية العون الإنساني ببورتسودان في العام 2024 تحت قوانين العمل الإنساني للعام 2006، كمنظمة وطنية (NGOs) تحت الرقم 623/2024.</p>
+      <button class="btn-readmore" id="btnReadMore" onclick="openProfile()" type="button">
+        <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        <span data-en="Read Full Profile">اقرأ الملف الكامل</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       FULL PROFILE — HIDDEN UNTIL READ MORE
+  ══════════════════════════════════════════ -->
+  <div id="profileFull">
+    <div class="pf-wrap">
+
+      <!-- BACKGROUND -->
+      <h3 class="pf-heading" data-en="Background">الخلفية</h3>
+      <p class="pf-text" data-en="ATTAA Organization for Peace and Development is a national, non-governmental, non-political, non-profit and non-discriminatory organization. It was established as a community-based organization (CBO) in 2019 in Sinnar State, and registered as a national organization with the Federal Humanitarian Aid Commission in Port Sudan in 2024 under the Humanitarian Work Law of Sudan of 2006, under No. 623/2024.">منظمة عطاء للسلام والتنمية منظمة وطنية غير حكومية، غير سياسية، غير ربحية، غير تمييزية، تأسست كمنظمة قاعدية (CBO) في العام 2019 بولاية سنار، وتسجلت كمنظمة وطنية بمفوضية العون الإنساني الاتحادية ببورتسودان في العام 2024 تحت قوانين العمل الإنساني بالسودان للعام 2006 تحت الرقم 623/2024.</p>
+
+      <hr class="pf-divider">
+
+      <!-- VISION & MISSION -->
+      <div class="pf-grid">
+        <div class="pf-card">
+          <div class="pf-card-title" data-en="Vision">الرؤية</div>
+          <p data-en="Sudan of one Nation, safe, stable and developing.">السودان وطن واحد، آمن، مستقر ومتطور.</p>
+        </div>
+        <div class="pf-card">
+          <div class="pf-card-title" data-en="Mission">المهمة</div>
+          <p data-en="ATTAA is dedicated to serve and advocacy Sudanese communities to achieving the positive desired change.">تكرّس عطاء جهودها لخدمة المجتمعات السودانية ومناصرتها من أجل تحقيق التغيير الإيجابي المنشود.</p>
+        </div>
+      </div>
+
+      <hr class="pf-divider">
+
+      <!-- STRATEGIC GOALS -->
+      <h3 class="pf-heading" data-en="Strategic Goals">الأهداف الاستراتيجية</h3>
+      <ul class="pf-list">
+        <li data-en="Support poor and vulnerable communities in Sudan and build a productive, self-sufficient society that contributes to development processes and achieves sustainable development goals.">دعم المجتمعات الفقيرة والضعيفة في السودان وبناء مجتمع منتج ومكتفٍ ذاتياً يساهم في مسيرة التنمية ويحقق أهداف التنمية المستدامة.</li>
+        <li data-en="Prevent tribal conflicts, promote a culture of peace and peaceful coexistence, and strengthen the social fabric.">منع النزاعات القبلية، وتعزيز ثقافة السلام والتعايش السلمي، وتقوية النسيج الاجتماعي.</li>
+      </ul>
+
+      <hr class="pf-divider">
+
+      <!-- MEANS -->
+      <h3 class="pf-heading" data-en="Means &amp; Approaches">الوسائل والأساليب</h3>
+      <ul class="pf-list">
+        <li data-en="Support and enhance livelihood opportunities for poor and most vulnerable families by implementing income-generating projects and ensuring their sustainability and continuity.">دعم وتعزيز فرص الرزق للأسر الفقيرة والأكثر ضعفاً من خلال تنفيذ مشاريع مدرّة للدخل وضمان استدامتها واستمراريتها.</li>
+        <li data-en="Support the infrastructure of poor communities in villages and rural areas by establishing, rehabilitating, and providing water, education, health, and sanitation services.">دعم البنية التحتية للمجتمعات الفقيرة في القرى والمناطق الريفية بإنشاء وتأهيل وتوفير خدمات المياه والتعليم والصحة والصرف الصحي.</li>
+        <li data-en="Build a culture of peace and tolerance by training community leaders, youth, and women in reconciliation, conflict resolution, and developing early warning mechanisms.">بناء ثقافة السلام والتسامح من خلال تدريب قادة المجتمع والشباب والمرأة على مهارات المصالحة وحل النزاعات وتطوير آليات الإنذار المبكر.</li>
+        <li data-en="Activate and strengthen the role of community, private sector, companies, and individuals to contribute to development processes in poor and vulnerable communities.">تفعيل وتعزيز دور المجتمع والقطاع الخاص والشركات والأفراد للمساهمة في مسيرة التنمية في المجتمعات الفقيرة والضعيفة.</li>
+        <li data-en="Contribute to recovery and emergency interventions to communities affected by natural disasters, tribal conflicts, and wars, to prevent and alleviate shock.">المساهمة في التعافي وتقديم المساعدة والتدخلات الطارئة للمجتمعات المتضررة من الكوارث الطبيعية والنزاعات القبلية والحروب للحدّ من الصدمات وتخفيف آثارها.</li>
+      </ul>
+
+      <hr class="pf-divider">
+
+      <!-- VALUES -->
+      <h3 class="pf-heading" data-en="ATTAA Values">قيم عطاء</h3>
+      <ul class="pf-list">
+        <li data-en="Identification, selection and design of projects.">تحديد المشاريع واختيارها وتصميمها.</li>
+        <li data-en="Overall responsibilities for implementation and supervision.">المسؤوليات الشاملة للتنفيذ والإشراف.</li>
+        <li data-en="Community mobilization and training coordination with relevant institutions for effective project implementation.">تعبئة المجتمع وتنسيق التدريب مع المؤسسات ذات الصلة لضمان فعالية تنفيذ المشاريع.</li>
+        <li data-en="Recruitment of the projects management key staff.">توظيف الكوادر الرئيسية لإدارة المشاريع.</li>
+        <li data-en="Monitoring and evaluation of the projects.">رصد المشاريع وتقييمها.</li>
+        <li data-en="Auditing of the project accounts.">تدقيق حسابات المشاريع.</li>
+        <li data-en="Accountable to our values.">المساءلة وفق قيمنا.</li>
+      </ul>
+
+      <hr class="pf-divider">
+
+      <!-- PRINCIPLES -->
+      <h3 class="pf-heading" data-en="ATTAA Principles">مبادئ عطاء</h3>
+      <div class="pf-principles">
+        <ul class="pf-list">
+          <li data-en="ATTAA activities are carried out without any discriminatory base.">تُنفَّذ أنشطة عطاء دون أي أساس تمييزي.</li>
+          <li data-en="We are accountable to our objectives and values.">نحن مسؤولون أمام أهدافنا وقيمنا.</li>
+          <li data-en="ATTAA maintains consistency with its core aspirations; leadership and staff will not use their position for personal advantage of any kind.">تحافظ عطاء على الاتساق مع تطلعاتها الجوهرية؛ ولن تستخدم القيادة والموظفون مناصبهم لتحقيق منافع شخصية من أي نوع.</li>
+          <li data-en="We enable all stakeholders to evaluate our organization, programs, activities, fund-raising and financial performance.">نُمكّن جميع أصحاب المصلحة من تقييم منظمتنا وبرامجها وأنشطتها وجمع التبرعات والأداء المالي.</li>
+          <li data-en="ATTAA ensures respect for the laws and regulations.">تضمن عطاء احترام القوانين والأنظمة.</li>
+          <li data-en="ATTAA respects and strongly considers cultural sensitivity, values, dignity, history, and religion of the communities.">تحترم عطاء وتأخذ بعين الاعتبار الحساسية الثقافية وقيم المجتمعات وكرامتها وتاريخها ودينها.</li>
+          <li data-en="ATTAA is committed to adopting non-violent ways in solving problems, disputes and conflicts.">تلتزم عطاء باعتماد أساليب اللاعنف في حل المشكلات والنزاعات والصراعات.</li>
+          <li data-en="ATTAA values the knowledge, culture and abilities of rural communities and ensures to build on what they have.">تقدّر عطاء معرفة المجتمعات الريفية وثقافتها وقدراتها وتحرص على البناء على ما لديها.</li>
+          <li data-en="Respect for national charters and laws.">احترام المواثيق والقوانين الوطنية.</li>
+          <li data-en="Respecting the laws, charters, and treaties of the United Nations.">احترام قوانين ومواثيق ومعاهدات الأمم المتحدة.</li>
+          <li data-en="Joint work with humanitarian partners and building partnerships to achieve sustainable development goals.">العمل المشترك مع الشركاء الإنسانيين وبناء الشراكات لتحقيق أهداف التنمية المستدامة.</li>
+        </ul>
+      </div>
+
+      <hr class="pf-divider">
+
+      <!-- STRATEGY APPROACH -->
+      <h3 class="pf-heading" data-en="ATTAA Strategy Approach">النهج الاستراتيجي لعطاء</h3>
+      <p class="pf-text" data-en="To achieve the project objectives, ATTAA is hinged upon the following overarching basic principles:">لتحقيق أهداف المشاريع، ترتكز عطاء على المبادئ الأساسية الشاملة التالية:</p>
+
+      <h4 class="pf-heading" style="font-size:1rem; margin-top:1rem;" data-en="Proper Selection of the Project Area">الاختيار الصحيح لمنطقة المشروع</h4>
+      <p class="pf-text" data-en="ATTAA projects are open to all rural areas in Sudan; however, the organization pays more attention to those developmentally overlooked areas that suffered impacts of climate change, war, and tribal conflicts.">مشاريع عطاء مفتوحة لجميع المناطق الريفية في السودان، غير أن المنظمة تولي اهتماماً أكبر للمناطق المهمّشة تنموياً والمتضررة من تداعيات تغير المناخ والحروب والنزاعات القبلية.</p>
+
+      <h4 class="pf-heading" style="font-size:1rem;" data-en="Specificity of Target Groups and Beneficiaries">تحديد الفئات المستهدفة والمستفيدين</h4>
+      <p class="pf-text" data-en="ATTAA developed guiding standards to select direct beneficiaries including: women and female-headed households, needy families and poor people specially the most vulnerable groups, and war-affected and displaced groups.">طوّرت عطاء معايير توجيهية لاختيار المستفيدين المباشرين تشمل: النساء وربات الأسر، والأسر المحتاجة والفقراء ولا سيما الفئات الأشد ضعفاً، والمجموعات المتضررة من الحرب والنازحين.</p>
+
+      <h4 class="pf-heading" style="font-size:1rem;" data-en="Gender Equity and Involvement of Women">المساواة بين الجنسين وإشراك المرأة</h4>
+      <p class="pf-text" data-en="ATTAA projects ensure fair representation of different gender groups in all project designs, with more emphasis exercised on women's involvement, inclusion and empowerment.">تكفل مشاريع عطاء التمثيل العادل لمختلف الفئات الجنسانية في جميع تصاميم المشاريع، مع التركيز بصورة أكبر على إشراك المرأة وإدماجها وتمكينها.</p>
+
+      <h4 class="pf-heading" style="font-size:1rem;" data-en="Community Participation">مشاركة المجتمع</h4>
+      <p class="pf-text" data-en="Community participation is a very essential component of rural development. Our projects involve the target population starting from planning through implementation and evaluation.">تُعدّ مشاركة المجتمع ركيزةً أساسية للتنمية الريفية. تُشرك مشاريعنا السكان المستهدفين ابتداءً من التخطيط مروراً بالتنفيذ وانتهاءً بالتقييم.</p>
+
+      <h4 class="pf-heading" style="font-size:1rem;" data-en="Sustainability">الاستدامة</h4>
+      <p class="pf-text" data-en="ATTAA projects embody in their design and implementation elements of sustainability so that the stakeholders, participants and host institutions will take over the project and continue it themselves.">تُجسّد مشاريع عطاء في تصميمها وتنفيذها عناصر الاستدامة بحيث يتولى أصحاب المصلحة والمشاركون والمؤسسات المضيفة إدارة المشروع ومواصلته بأنفسهم.</p>
+
+      <h4 class="pf-heading" style="font-size:1rem;" data-en="Environmental Awareness">الوعي البيئي</h4>
+      <p class="pf-text" data-en="To safeguard the environment and natural resources, ATTAA mainstreams environmental activities in all its projects and interventions, including environmental education, awareness, plantation, and hygiene campaigns.">حفاظاً على البيئة والموارد الطبيعية، تُدمج عطاء الأنشطة البيئية في جميع مشاريعها وتدخلاتها بما في ذلك التثقيف البيئي والتوعية والتشجير وحملات النظافة.</p>
+
+      <h4 class="pf-heading" style="font-size:1rem;" data-en="Stakeholders">أصحاب المصلحة</h4>
+      <p class="pf-text" data-en="ATTAA maintains good relationships with all stakeholders based on pillars of good governance and ensures accountability to all: donors, partners, relevant institutions, HAC, and the communities it serves.">تحافظ عطاء على علاقات جيدة مع جميع أصحاب المصلحة استناداً إلى ركائز الحوكمة الرشيدة، وتضمن المساءلة أمام الجميع: المانحين والشركاء والمؤسسات ذات الصلة ومفوضية العون الإنساني والمجتمعات التي تخدمها.</p>
+
+      <div style="text-align:center; padding-top:.5rem;">
+        <button class="btn-close-profile" onclick="closeProfile()" type="button">
+          <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          <span data-en="Close Profile">إغلاق الملف</span>
+        </button>
+      </div>
+
+    </div><!-- /.pf-wrap -->
+  </div><!-- /#profileFull -->
+
+</main>
+
+<style>
+.map-sec{padding:70px 0 20px}
+.map-card{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.map-media{border-radius:22px;overflow:hidden;box-shadow:0 24px 60px rgba(10,31,77,.18);line-height:0;background:#1f2a3c}
+.map-media img{width:100%;display:block}
+.map-text .label{color:var(--green-dark);font-weight:700;font-size:15px}
+.map-text h2{font-size:clamp(28px,2.8vw,40px);font-weight:800;margin:10px 0 16px;line-height:1.4}
+.map-text p{font-size:18px;color:var(--muted);line-height:2;border-inline-start:3px solid var(--green);padding-inline-start:20px}
+@media(max-width:980px){.map-card{grid-template-columns:1fr;gap:28px}.map-sec{padding:50px 0 10px}}
+</style>
+
+<!-- MAP -->
+<section class="map-sec">
+  <div class="container">
+    <div class="map-card">
+      <div class="map-media"><img src="images/sudan-map.jpg" alt="Map highlighting Sudan" loading="lazy"></div>
+      <div class="map-text">
+        <div class="label" data-en="Where we work">حيث نعمل</div>
+        <h2 data-en="Sudan, one nation at the heart of the region">السودان، وطن واحد في قلب المنطقة</h2>
+        <p data-en="Attaa works across Sudan, from its headquarters in Sinnar State to the communities that need support most. We stand with people wherever they are. Our vision is a Sudan that is safe, stable and developing.">تعمل عطاء في أنحاء السودان، من مقرها في ولاية سنار إلى المجتمعات الأكثر حاجة للدعم. نقف مع الناس أينما كانوا. ورؤيتنا سودانٌ آمن ومستقر ومتطور.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GENERAL PROVISIONS -->
+<section class="gen">
+  <div class="container">
+    <div>
+      <div class="label" data-en="General provisions">أحكام عامة</div>
+      <h2 data-en="Institutional independence and disciplined resources">استقلالٌ مؤسسي وموارد منضبطة</h2>
+    </div>
+    <div>
+      <p data-en="The organization is funded through membership subscriptions and through partnerships with United Nations agencies, foreign organizations, institutions and embassies, and donations from philanthropists.">يتم تمويل المنظمة من خلال اشتراكات العضوية ومن خلال الشراكات مع وكالات الأمم المتحدة والمنظمات الأجنبية والهيئات والسفارات وتبرعات الخيّرين.</p>
+      <p data-en="Funds are deposited in separate accounts at national banks, records and the financial archive are kept for at least five years, with a mandatory annual audit by an accredited external auditor.">تودع الأموال في حسابات منفصلة لدى المصارف الوطنية، وتحفظ السجلات والأرشيف المالي لمدة خمس سنوات على الأقل، مع تدقيق سنوي إلزامي بواسطة مراجع خارجي معتمد.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STRUCTURE -->
+<div class="container">
+  <section class="structure">
+    <div class="label" data-en="Interactive structure">هيكل تفاعلي</div>
+    <h2 data-en="How is Attaa Organization run?">كيف تُدار منظمة عطاء؟</h2>
+    <p class="sub" data-en="Choose any level to learn about its role and powers.">اختر أي مستوى للتعرف على دوره وصلاحياته.</p>
+
+    <figure class="struct-photo"><img src="images/board-meeting.jpg" alt="اجتماع مجلس إدارة منظمة عطاء" loading="lazy"><figcaption data-en="Board of Directors meeting">اجتماع مجلس الإدارة</figcaption></figure>
+
+    <div class="org-tabs" id="orgTabs">
+      <button class="org-tab active" data-i="0" type="button"><span class="n">01</span><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.5-3.5 3-5.5 6.5-5.5s6 2 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 010 7M18 14.8c2 .6 3.3 2.4 3.5 5.2"/></svg><span data-en="General Assembly">الجمعية العمومية</span></button>
+      <button class="org-tab" data-i="1" type="button"><span class="n">02</span><svg viewBox="0 0 24 24"><path d="M3 9l9-5 9 5H3z"/><path d="M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 21h18"/></svg><span data-en="Executive Committee">اللجنة التنفيذية</span></button>
+      <button class="org-tab" data-i="2" type="button"><span class="n">03</span><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><span data-en="Board of Trustees">مجلس الأمناء</span></button>
+      <button class="org-tab" data-i="3" type="button"><span class="n">04</span><svg viewBox="0 0 24 24"><path d="M3 9l9-5 9 5H3z"/><path d="M5 9v9M9.5 9v9M14.5 9v9M19 9v9M3 21h18"/></svg><span data-en="Administration &amp; Field Offices">الإدارة والمكاتب الميدانية</span></button>
+    </div>
+
+    <div class="org-detail" aria-live="polite">
+      <div class="lv" id="dLv"></div>
+      <h3 id="dTitle"></h3>
+      <p id="dText"></p>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="fgrid">
+      <div class="f-brand">
+        <a href="index.html" class="brand">
+          <img src="images/logo.jpg" alt="ATTAA logo">
+          <span class="brand-text">
+            <span class="brand-name" data-en="Attaa Organization">منظمة عطاء</span>
+            <span class="brand-sub" data-en="for Peace and Development">للسلام والتنمية</span>
+          </span>
+        </a>
+        <p data-en="We work with Sudanese communities to build a safe, stable and productive homeland that preserves everyone's dignity.">نعمل مع المجتمعات السودانية لبناء وطن آمن، مستقر، ومنتج يحفظ كرامة الجميع.</p>
+        <p class="f-reg" data-en="ATTAA Organization for Peace and Development was established as a community-based organization (CBO) in 2019 in Sinnar State and was registered federally with the Humanitarian Aid Commission in Port Sudan in 2024 under the Humanitarian Work Law of 2006, as a national organization (NGOs) under No. 623/2024.">تأسست منظمة عطاء للسلام والتنمية كمنظمة قاعدية (CBO) في العام 2019 بولاية سنار، وتم تسجيلها اتحادياً بمفوضية العون الإنساني ببورتسودان في العام 2024 تحت قوانين العمل الإنساني للعام 2006، كمنظمة وطنية (NGOs) تحت الرقم 623/2024.</p>
+        <small>HAC Registration No. 623/2024</small>
+      </div>
+
+      <div>
+        <h4 data-en="Quick links">روابط أساسية</h4>
+        <ul>
+          <li><a href="policies.html" data-en="Policies &amp; Governance">السياسات والحوكمة</a></li>
+          <li><a href="accountability.html" data-en="Accountability &amp; Complaints">المساءلة والشكاوى</a></li>
+          <li><a href="reports.html" data-en="Annual Reports">التقارير السنوية</a></li>
+          <li><a href="jobs.html" data-en="Jobs &amp; Membership">الوظائف والعضوية</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 data-en="Contact us">تواصل معنا</h4>
+        <ul>
+          <li data-en="Khartoum, Sudan">الخرطوم، السودان</li>
+          <li data-en="State offices — Sennar">ومكاتب الولايات — سنار</li>
+          <li><a href="mailto:info@attaa.org" style="font-family:Inter,sans-serif">info@attaa.org</a></li>
+          <li data-en="Complaint boxes checked weekly">صناديق الملاحظات تُراجع أسبوعياً</li>
+        </ul>
+      </div>
+
+      <div class="report-box" id="report">
+        <svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+        <h4 data-en="Have a report?">هل لديك بلاغ؟</h4>
+        <p data-en="We guarantee confidentiality and protection from retaliation for reports submitted in good faith.">نضمن السرية والحماية من الانتقام للبلاغات المقدمة بحسن نية.</p>
+        <a href="accountability.html" data-en="Go to the accountability portal">انتقل إلى بوابة المساءلة</a>
+      </div>
+    </div>
+
+    <div class="fbottom">
+      <span data-en="© 2025 Attaa Organization for Peace and Development. All rights reserved.">© 2025 منظمة عطاء للسلام والتنمية. جميع الحقوق محفوظة.</span>
+      <span><a href="#" data-en="Privacy">الخصوصية</a> · <a href="#" data-en="Terms of use">شروط الاستخدام</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+/* ── Org Chart ─────────────────────────────── */
+(function () {
+  var levels = [
+    { ar: ['الجمعية العمومية','السلطة التشريعية العليا وتتكون من الأعضاء المسجلين. تجتمع سنوياً أو استثنائياً بطلب ثلثي الأعضاء، والنصاب القانوني 51 عضواً.'],
+      en: ['General Assembly','The supreme legislative authority, made up of registered members. It meets annually or in extraordinary session at the request of two-thirds of members, with a legal quorum of 51 members.'] },
+    { ar: ['اللجنة التنفيذية','الجهة التنفيذية التي تدير العمل اليومي، وتنفذ قرارات الجمعية العمومية، وتشرف على البرامج والموازنات.'],
+      en: ['Executive Committee','The executive body that runs daily work, implements General Assembly decisions, and oversees programs and budgets.'] },
+    { ar: ['مجلس الأمناء','يراقب الالتزام بالمهمة والقيم، ويراجع التقارير المالية، ويحمي استقلال المنظمة.'],
+      en: ['Board of Trustees','Monitors adherence to the mission and values, reviews financial reports, and protects the organization\'s independence.'] },
+    { ar: ['الإدارة والمكاتب الميدانية','تنفذ البرامج ميدانياً في الولايات، وتتلقى ملاحظات وشكاوى المجتمعات وتحيلها للجهات المختصة.'],
+      en: ['Administration & Field Offices','Implements programs in the states, receives community feedback and complaints, and refers them to the relevant bodies.'] }
+  ];
+  var tabs = document.querySelectorAll('.org-tab'), cur = 0;
+  function render() {
+    var en = document.documentElement.lang === 'en', d = levels[cur][en ? 'en' : 'ar'];
+    document.getElementById('dLv').textContent = (en ? 'Level 0' : 'المستوى 0') + (cur + 1);
+    document.getElementById('dTitle').textContent = d[0];
+    document.getElementById('dText').textContent = d[1];
+    tabs.forEach(function (t, i) { t.classList.toggle('active', i === cur); });
+  }
+  tabs.forEach(function (t) { t.addEventListener('click', function () { cur = +t.dataset.i; render(); }); });
+  window.onLangChange = render;
+  render();
+})();
+
+/* ── Profile Read More / Close ──────────────── */
+function openProfile() {
+  document.getElementById('profileFull').classList.add('open');
+  document.getElementById('btnReadMore').style.display = 'none';
+  document.getElementById('profileFull').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function closeProfile() {
+  document.getElementById('profileFull').classList.remove('open');
+  document.getElementById('btnReadMore').style.display = '';
+  document.querySelector('.profile-intro').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
+</body>
+</html>

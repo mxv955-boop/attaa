@@ -1,0 +1,481 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="دستور منظمة عطاء للسلام والتنمية: الوثيقة التأسيسية المسجلة لدى مفوضية العون الإنساني.">
+<title>دستور المنظمة | منظمة عطاء للسلام والتنمية</title>
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@500;700;800&family=Noto+Sans+Arabic:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="policy-doc.css">
+<style>
+.art-num {
+  display: inline-block;
+  background: var(--navy, #1a3c64);
+  color: #fff;
+  font-size: .78rem;
+  font-weight: 700;
+  padding: .25rem .75rem;
+  border-radius: 6px;
+  margin-bottom: .6rem;
+  letter-spacing: .04em;
+}
+.con-art { scroll-margin-top: 90px; margin-bottom: .5rem; }
+.con-art h3 {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--navy, #1a3c64);
+  margin: 0 0 .8rem;
+  text-align: start;
+}
+.con-art p {
+  font-size: .93rem;
+  color: var(--ink, #2d3748);
+  line-height: 1.95;
+  margin: 0 0 .65rem;
+  text-align: start;
+  direction: inherit;
+}
+.con-art ul {
+  list-style: none;
+  padding: 0;
+  margin: .3rem 0 .5rem;
+}
+.con-art ul li {
+  font-size: .93rem;
+  color: var(--ink, #2d3748);
+  line-height: 1.85;
+  padding: .3rem 1.6rem .3rem 0;
+  position: relative;
+  text-align: start;
+  direction: inherit;
+}
+.con-art ul li::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: .85rem;
+  width: 7px;
+  height: 7px;
+  background: var(--green, #2ea87e);
+  border-radius: 50%;
+}
+html[dir="ltr"] .con-art p,
+html[dir="ltr"] .con-art h3,
+html[dir="ltr"] .con-art ul li,
+html[dir="ltr"] .art-num {
+  text-align: left;
+  direction: ltr;
+}
+html[dir="ltr"] .con-art ul li { padding: .3rem 0 .3rem 1.6rem; }
+html[dir="ltr"] .con-art ul li::before { right: auto; left: 0; }
+
+.con-divider {
+  border: none;
+  border-top: 1px solid var(--line, #e2e8f0);
+  margin: 2rem 0;
+}
+
+/* Signature grid */
+.con-sign {
+  background: var(--navy, #1a3c64);
+  color: #fff;
+  border-radius: 12px;
+  padding: 1.6rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem 2rem;
+  margin-top: 1.5rem;
+}
+.con-sign-item small {
+  display: block;
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: rgba(255,255,255,.6);
+  margin-bottom: .3rem;
+}
+.con-sign-item b {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-size: .95rem;
+  font-weight: 700;
+}
+.con-sign-item .sig-line {
+  border-top: 1px solid rgba(255,255,255,.3);
+  margin-top: 1.5rem;
+  padding-top: .4rem;
+  font-size: .75rem;
+  color: rgba(255,255,255,.5);
+}
+
+/* Back button */
+.back-row {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0 3rem;
+}
+.back-row a {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: var(--navy, #1a3c64);
+  color: #fff;
+  font-size: .92rem;
+  font-weight: 600;
+  padding: .7rem 2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background .2s, transform .15s;
+  font-family: inherit;
+}
+.back-row a:hover { background: var(--green, #2ea87e); transform: translateY(-1px); }
+.back-row a svg { width:16px;height:16px;fill:none;stroke:#fff;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round; }
+
+@media (max-width: 640px) {
+  .con-sign { grid-template-columns: 1fr; }
+}
+
+/* ── Banner Image ─────────────────────────── */
+.con-banner {
+  width: 100%;
+  height: 420px;
+  background: radial-gradient(circle at 85% 30%, rgba(76,175,31,.22), transparent 45%), linear-gradient(135deg, #0b2a63 0%, #1a3c64 55%, #1f6f5a 100%);
+  position: relative;
+  overflow: hidden;
+}
+.con-banner::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='none' stroke='%23ffffff' stroke-opacity='.07'/%3E%3Ccircle cx='30' cy='30' r='3' fill='%23ffffff' fill-opacity='.06'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+.con-banner::before { display: none; }
+.con-seal{position:absolute;inset-inline-end:7%;top:50%;transform:translateY(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:14px}
+.con-seal .badge{width:300px;filter:drop-shadow(0 16px 34px rgba(0,0,0,.4))}
+.con-seal .badge svg{width:100%;height:auto;display:block}
+.con-seal span{color:#fff;font:700 15px "Noto Kufi Arabic","Inter",sans-serif;letter-spacing:.04em;margin-top:10px;padding:6px 18px;border:1px solid rgba(255,255,255,.4);border-radius:999px;background:rgba(255,255,255,.08)}
+.con-banner-overlay{z-index:2}
+@media (max-width: 900px){.con-seal{position:relative;inset:auto;transform:none;margin:0 auto 28px;order:2}.con-banner-overlay{position:relative !important;inset:auto !important;order:1;padding:32px 20px 22px !important}.con-seal .badge{width:200px}.con-banner{height:auto !important;min-height:0 !important;display:flex;flex-direction:column}}
+.con-banner-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 2rem 2.5rem;
+  padding-inline-end: calc(44% + 2.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.con-banner-quote {
+  margin: 0;
+  text-align: center;
+  max-width: 680px;
+}
+.con-banner-quote span {
+  display: block;
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 12px rgba(0,0,0,.35);
+}
+.con-banner-quote cite {
+  font-family: 'Noto Sans Arabic', sans-serif;
+  font-size: .85rem;
+  font-style: normal;
+  font-weight: 500;
+  color: rgba(255,255,255,.75);
+  letter-spacing: .04em;
+  border-top: 1px solid rgba(255,255,255,.3);
+  display: inline-block;
+  padding-top: .6rem;
+}
+@media (max-width: 640px) {
+  .con-banner { height: 480px; }
+  .con-banner-overlay { padding: 0 1.5rem; }
+  .con-banner-quote span { font-size: 1.15rem; }
+}
+.pd-meta{display:flex;flex-wrap:wrap;gap:12px}
+.pd-meta-item{flex:1 1 130px;min-width:0}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <span data-en="Non-governmental, non-profit national organization">منظمة وطنية غير حكومية وغير ربحية</span>
+    <span data-en="Registered with the Humanitarian Aid Commission — No. 623/2024">مسجلة لدى مفوضية العون الإنساني — رقم 623/2024</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="images/logo.jpg" alt="ATTAA logo">
+      <span class="brand-text">
+        <span class="brand-name" data-en="Attaa Organization">منظمة عطاء</span>
+        <span class="brand-sub" data-en="for Peace and Development">للسلام والتنمية</span>
+      </span>
+    </a>
+    <nav class="nav">
+      <a href="index.html" data-en="Home">الرئيسية</a>
+      <a href="about.html" data-en="About Us">من نحن</a>
+      <a href="programs.html" data-en="Programs">البرامج</a>
+      <a href="policies.html" data-en="Policies">السياسات</a>
+      <a href="accountability.html" data-en="Accountability">المساءلة</a>
+      <a href="reports.html" data-en="Reports">التقارير</a>
+      <a href="jobs.html" data-en="Jobs">الوظائف</a>
+      <a href="contact.html" data-en="Contact Us">اتصل بنا</a>
+    </nav>
+    <div class="header-actions">
+      <button class="lang" id="langBtn" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="8"></circle>
+          <path d="M4 12h16M12 4a13.5 13.5 0 010 16M12 4a13.5 13.5 0 000 16"></path>
+        </svg>
+        <span>EN</span>
+      </button>
+      <a href="donate.html" class="btn btn-green btn-sm" data-en="Donate">تبرّع</a>
+      <a href="volunteer.html" class="btn btn-light btn-sm btn-vol" data-en="Volunteer">تطوّع</a>
+      <a href="accountability.html#form" class="btn btn-navy">
+        <span data-en="Safe Report">إبلاغ آمن</span>
+        <svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="pd-hero">
+  <div class="container">
+    <a href="about.html" class="pd-back" data-en="← Back to About Us">← العودة إلى من نحن</a>
+    <div class="pd-hero-inner">
+      <div>
+        <h1 data-en="Organization Constitution">دستور المنظمة</h1>
+        <p data-en="The founding constitutional document of Giving Organization for Peace and Development (ATTAA), registered under the Humanitarian Aid Commission of Sudan, No. 623/2024.">الوثيقة التأسيسية الدستورية لمنظمة عطاء للسلام والتنمية، المسجلة لدى مفوضية العون الإنساني في السودان، رقم 623/2024.</p>
+      </div>
+      <div class="pd-meta">
+        <div class="pd-meta-item"><small data-en="Registration No.">رقم التسجيل</small><b>623/2024</b></div>
+        <div class="pd-meta-item"><small data-en="Effective Date">تاريخ النفاذ</small><b data-en="20 Nov 2020">20 نوفمبر 2020</b></div>
+        <div class="pd-meta-item"><small data-en="Status">الحالة</small><b data-en="Active">سارية المفعول</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BANNER IMAGE -->
+<div class="con-banner">
+  <div class="con-seal"><div class="badge"><svg viewBox="0 0 320 270" role="img" aria-label="Constitution document" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <g stroke="#fff" stroke-opacity=".6" stroke-width="2.5">
+        <path d="M22 250h50M26 244h42M34 244V104M60 244V104M28 104h38M24 96h46M30 96l5-10h26l5 10"/>
+        <path d="M248 250h50M252 244h42M260 244V104M286 244V104M254 104h38M250 96h46M256 96l5-10h26l5 10"/>
+      </g>
+      <rect x="92" y="14" width="136" height="196" rx="12" fill="#fff" transform="rotate(-4 160 112)" opacity=".35"/>
+      <rect x="92" y="20" width="136" height="196" rx="12" fill="#fff"/>
+      <path d="M228 20l-0 38h0" stroke="none"/>
+      <rect x="108" y="38" width="104" height="10" rx="5" fill="#0b2a63"/>
+      <g fill="#c9d4ea"><rect x="108" y="64" width="104" height="5" rx="2.5"/><rect x="108" y="78" width="88" height="5" rx="2.5"/><rect x="108" y="92" width="104" height="5" rx="2.5"/><rect x="108" y="106" width="76" height="5" rx="2.5"/><rect x="108" y="120" width="96" height="5" rx="2.5"/></g>
+      <g stroke="#4caf1f" stroke-width="3"><path d="M118 146l5 5 9-10"/><path d="M118 164l5 5 9-10"/></g>
+      <g fill="#c9d4ea"><rect x="142" y="146" width="62" height="5" rx="2.5"/><rect x="142" y="164" width="52" height="5" rx="2.5"/></g>
+      <path d="M142 214l-12 38 22-10 10 14 8-36z" fill="#4caf1f"/><path d="M178 214l12 38-22-10-10 14-8-36z" fill="#2f8a12"/>
+      <circle cx="160" cy="206" r="28" fill="#4caf1f" stroke="#fff" stroke-width="4"/>
+      <circle cx="160" cy="206" r="20" stroke="#fff" stroke-opacity=".7" stroke-width="2"/>
+      <path d="M160 194l4 9 10 1-7.5 7 2 10-8.5-5-8.5 5 2-10-7.5-7 10-1z" fill="#fff" stroke="none"/>
+    </svg></div><span data-en="Founding Constitution">الدستور التأسيسي</span></div>
+  <div class="con-banner-overlay">
+    <blockquote class="con-banner-quote">
+      <span data-en="&ldquo;We believe in one Sudan — safe, stable, and developing for all.&rdquo;">&ldquo;نؤمن بسودانٍ واحد — آمنٍ، مستقرٍ، ومتطوِّرٍ للجميع.&rdquo;</span>
+      <cite data-en="ATTAA Organization Constitution — Preamble">دستور منظمة عطاء — الديباجة</cite>
+    </blockquote>
+  </div>
+</div>
+
+<!-- ARTICLES -->
+<div class="pd-doc bi">
+<div class="container">
+
+  <!-- ─── ARTICLE 2 ─── -->
+  <div class="pd-sec con-art" id="art1">
+    <span class="art-num" data-en="Article 1">المادة الأولى</span>
+    <h3 data-en="Headquarters &amp; Offices">المقر الرئيسي والمكاتب</h3>
+    <p data-en="1.1 The main headquarters is located in Sinnar State, Republic of Sudan.">1.1 يقع المقر الرئيسي للمنظمة في ولاية سنار، جمهورية السودان.</p>
+    <p data-en="1.2 The organization may establish field offices or liaison offices in any state of Sudan or abroad, in accordance with applicable laws and with approval of the competent authorities.">1.2 يجوز للمنظمة إنشاء مكاتب ميدانية أو مكاتب اتصال في أي ولاية في السودان أو في الخارج، وفقاً للقوانين المعمول بها وبموافقة الجهات المختصة.</p>
+    <p data-en="1.3 The Executive Committee may decide to relocate the headquarters or open new offices as required by work, subject to ratification by the General Assembly.">1.3 يجوز للجنة التنفيذية قرار تغيير المقر أو فتح مكاتب جديدة حسب متطلبات العمل، على أن يُصادق على ذلك من قِبل الجمعية العمومية.</p>
+  </div>
+
+  <hr class="con-divider">
+
+  <!-- ─── ARTICLE 3 ─── -->
+  <div class="pd-sec con-art" id="art2">
+    <span class="art-num" data-en="Article 2">المادة الثانية</span>
+    <h3 data-en="Vision, Mission &amp; Values">الرؤية والمهمة والقيم</h3>
+    <p data-en="1.1 Vision: Sudan of one Nation, safe, stable and developing.">1.1 الرؤية: السودان وطن واحد، آمن، مستقر ومتطور.</p>
+    <p data-en="1.2 Mission: ATTAA is dedicated to serve and advocate for Sudanese communities to achieve the positive desired change.">1.2 المهمة: تكرّس عطاء جهودها لخدمة المجتمعات السودانية ومناصرتها من أجل تحقيق التغيير الإيجابي المنشود.</p>
+    <p data-en="1.3 The organization is guided in all its work by the following values:">1.3 تسترشد المنظمة في جميع أعمالها بالقيم التالية:</p>
+    <ul>
+      <li data-en="Non-discrimination: Activities are carried out without any discriminatory base regardless of race, sex, religion or political affiliation.">عدم التمييز: تُنفَّذ الأنشطة دون أي أساس تمييزي بصرف النظر عن العرق أو الجنس أو الدين أو الانتماء السياسي.</li>
+      <li data-en="Accountability: The organization is accountable to its objectives, values, beneficiaries, donors and partners.">المساءلة: المنظمة مسؤولة أمام أهدافها وقيمها ومستفيديها والمانحين والشركاء.</li>
+      <li data-en="Transparency: Enabling all stakeholders to evaluate programs, activities and financial performance.">الشفافية: تمكين جميع أصحاب المصلحة من تقييم البرامج والأنشطة والأداء المالي.</li>
+      <li data-en="Respect for the law: Ensuring respect for national laws and the laws and charters of the United Nations.">احترام القانون: ضمان احترام القوانين الوطنية وقوانين ومواثيق الأمم المتحدة.</li>
+      <li data-en="Cultural sensitivity: Respecting the cultural values, dignity, history and religion of the communities served.">الحساسية الثقافية: احترام القيم الثقافية وكرامة المجتمعات وتاريخها ودينها.</li>
+      <li data-en="Non-violence: Commitment to adopting non-violent ways in solving problems and conflicts.">اللاعنف: الالتزام باعتماد أساليب اللاعنف في حل المشكلات والصراعات.</li>
+    </ul>
+  </div>
+
+  <hr class="con-divider">
+
+  <!-- ─── ARTICLE 4 ─── -->
+  <div class="pd-sec con-art" id="art3">
+    <span class="art-num" data-en="Article 3">المادة الثالثة</span>
+    <h3 data-en="Objectives &amp; Activities">الأهداف والأنشطة</h3>
+    <p data-en="The organization works to achieve the following objectives:">تعمل المنظمة على تحقيق الأهداف التالية:</p>
+    <ul>
+      <li data-en="Support poor and vulnerable communities in Sudan and build a productive, self-sufficient society contributing to sustainable development goals.">دعم المجتمعات الفقيرة والضعيفة في السودان وبناء مجتمع منتج ومكتفٍ ذاتياً يساهم في تحقيق أهداف التنمية المستدامة.</li>
+      <li data-en="Prevent tribal conflicts, promote a culture of peace and peaceful coexistence, and strengthen the social fabric.">منع النزاعات القبلية، وتعزيز ثقافة السلام والتعايش السلمي، وتقوية النسيج الاجتماعي.</li>
+      <li data-en="Support livelihood opportunities for poor and most vulnerable families through income-generating projects.">دعم فرص الرزق للأسر الفقيرة والأكثر ضعفاً من خلال مشاريع مدرّة للدخل.</li>
+      <li data-en="Support rural community infrastructure by providing water, education, health and sanitation services.">دعم البنية التحتية للمجتمعات الريفية بتوفير خدمات المياه والتعليم والصحة والصرف الصحي.</li>
+      <li data-en="Build a culture of peace by training community leaders, youth and women in reconciliation and conflict resolution.">بناء ثقافة السلام من خلال تدريب قادة المجتمع والشباب والمرأة على المصالحة وحل النزاعات.</li>
+      <li data-en="Contribute to emergency response and recovery for communities affected by disasters, wars and tribal conflicts.">المساهمة في الاستجابة الطارئة والتعافي للمجتمعات المتضررة من الكوارث والحروب والنزاعات.</li>
+      <li data-en="Enhance the role of the private sector and civil society in development processes.">تعزيز دور القطاع الخاص والمجتمع المدني في مسيرة التنمية.</li>
+    </ul>
+  </div>
+
+  <hr class="con-divider">
+
+  <!-- ─── ARTICLE 6 ─── -->
+  <div class="pd-sec con-art" id="art4">
+    <span class="art-num" data-en="Article 4">المادة الرابعة</span>
+    <h3 data-en="General Assembly">الجمعية العمومية</h3>
+    <p data-en="1.1 The General Assembly is the supreme authority of the organization, composed of all full members.">1.1 الجمعية العمومية هي السلطة العليا للمنظمة وتتكون من جميع الأعضاء الكاملين.</p>
+    <p data-en="1.2 The General Assembly meets in an ordinary session once a year, and may convene in extraordinary session at the request of the Executive Committee or two-thirds of members.">1.2 تجتمع الجمعية العمومية في دورة عادية مرة سنوياً، ويجوز لها الانعقاد في دورة استثنائية بطلب من اللجنة التنفيذية أو ثلثي الأعضاء.</p>
+    <p data-en="1.3 Legal quorum: 51 members or two-thirds of total members, whichever is less.">1.3 النصاب القانوني: 51 عضواً أو ثلثي العدد الإجمالي للأعضاء أيهما أقل.</p>
+    <p data-en="3.4 Powers: Electing the Executive Committee and Board of Trustees, approving the annual budget and financial statements, amending the constitution, and deciding on dissolution.">3.4 الاختصاصات: انتخاب اللجنة التنفيذية ومجلس الأمناء، واعتماد الميزانية والقوائم المالية، وتعديل الدستور، والبت في الحل.</p>
+  </div>
+
+  <hr class="con-divider">
+
+  <!-- ─── ARTICLE 7 ─── -->
+  <div class="pd-sec con-art" id="art5">
+    <span class="art-num" data-en="Article 5">المادة الخامسة</span>
+    <h3 data-en="Executive Committee">اللجنة التنفيذية</h3>
+    <p data-en="5.1 The Executive Committee manages the daily work of the organization and implements General Assembly decisions.">5.1 اللجنة التنفيذية هي الجهاز المسؤول عن إدارة العمل اليومي وتنفيذ قرارات الجمعية العمومية.</p>
+    <p data-en="5.2 It consists of 5 to 9 members elected by the General Assembly for a three-year term, renewable once.">5.2 تتكون من 5 إلى 9 أعضاء تنتخبهم الجمعية العمومية لمدة ثلاث سنوات قابلة للتجديد مرة واحدة.</p>
+    <p data-en="5.3 Led by a Chairperson elected from among its members, and includes a Secretary General and a Financial Officer.">5.3 يترأسها رئيس يُنتخب من بين أعضائها وتضم أميناً عاماً ومسؤولاً مالياً.</p>
+    <p data-en="5.4 Meets at least four times per year; decisions by majority vote, with the Chairperson holding the casting vote in case of a tie.">5.4 تجتمع أربع مرات سنوياً على الأقل؛ وتُتخذ القرارات بأغلبية الأصوات وللرئيس صوت ترجيحي عند التعادل.</p>
+  </div>
+
+  <hr class="con-divider">
+
+  <!-- ─── ARTICLE 8 ─── -->
+  <div class="pd-sec con-art" id="art6">
+    <span class="art-num" data-en="Article 6">المادة السادسة</span>
+    <h3 data-en="Board of Trustees">مجلس الأمناء</h3>
+    <p data-en="1.1 The Board of Trustees monitors compliance with the organization's mission, values and legal obligations.">1.1 مجلس الأمناء يراقب الالتزام برسالة المنظمة وقيمها والتزاماتها القانونية.</p>
+    <p data-en="1.2 Consists of 3 to 7 respected members with relevant expertise, elected by the General Assembly.">1.2 يتكون من 3 إلى 7 أعضاء من الشخصيات ذات المكانة والخبرة تنتخبهم الجمعية العمومية.</p>
+    <p data-en="1.3 Reviews financial reports and annual audits, and ensures resources are used in accordance with stated objectives.">1.3 يراجع التقارير المالية والتدقيق السنوي ويتأكد من استخدام الموارد وفق الأهداف المحددة.</p>
+    <p data-en="3.4 Members of the Board of Trustees may not simultaneously hold positions in the Executive Committee.">3.4 لا يجوز الجمع بين عضوية مجلس الأمناء وشغل المناصب في اللجنة التنفيذية.</p>
+  </div>
+
+  <hr class="con-divider">
+
+  <!-- ─── ARTICLE 10 ─── -->
+  <div class="pd-sec con-art" id="art7">
+    <span class="art-num" data-en="Article 7">المادة السابعة</span>
+    <h3 data-en="Dissolution &amp; Liquidation">الحل والتصفية</h3>
+    <p data-en="5.1 The organization may be dissolved voluntarily by a General Assembly decision with a two-thirds majority of all members.">5.1 يجوز حل المنظمة طوعياً بقرار من الجمعية العمومية بأغلبية ثلثي جميع الأعضاء.</p>
+    <p data-en="5.2 After settling all liabilities, the remaining assets shall be transferred to organizations with similar objectives designated by the General Assembly, and shall not be distributed among members.">5.2 بعد تسوية الالتزامات، تُحوَّل الأصول المتبقية إلى منظمات ذات أهداف مماثلة تحددها الجمعية العمومية ولا يجوز توزيعها على الأعضاء.</p>
+    <p data-en="5.3 A liquidation committee shall be appointed by the General Assembly to manage the dissolution process in accordance with applicable law.">5.3 تُعيَّن لجنة تصفية من قِبل الجمعية العمومية لإدارة عملية الحل وفق القانون المعمول به.</p>
+  </div>
+
+  <hr class="con-divider">
+
+  <!-- ─── ARTICLE 11 ─── -->
+  <div class="pd-sec con-art" id="art8">
+    <span class="art-num" data-en="Article 8">المادة الثامنة</span>
+    <h3 data-en="Constitutional Amendments">تعديلات الدستور</h3>
+    <p data-en="1.1 This constitution may be amended by a General Assembly decision with a two-thirds majority of attending members, provided the quorum is met.">1.1 يجوز تعديل هذا الدستور بقرار من الجمعية العمومية بأغلبية ثلثي الأعضاء الحاضرين شريطة اكتمال النصاب.</p>
+    <p data-en="1.2 Any proposed amendment must be submitted in writing to the Executive Committee at least 30 days before the General Assembly session.">1.2 يجب تقديم أي مقترح تعديل كتابياً إلى اللجنة التنفيذية قبل 30 يوماً من انعقاد الجمعية العمومية.</p>
+    <p data-en="1.3 Amendments come into force after approval by the General Assembly and ratification by the Humanitarian Aid Commission.">1.3 تدخل التعديلات حيز التنفيذ بعد موافقة الجمعية العمومية ومصادقة مفوضية العون الإنساني.</p>
+  </div>
+
+  <hr class="con-divider">
+
+  <!-- ─── ARTICLE 12 ─── -->
+  <div class="pd-sec con-art" id="art9">
+    <span class="art-num" data-en="Article 9">المادة التاسعة</span>
+    <h3 data-en="Final Provisions">أحكام ختامية</h3>
+    <p data-en="9.1 This constitution shall enter into force from the date of its ratification by the Humanitarian Aid Commission (HAC) of Sudan.">9.1 يسري هذا الدستور من تاريخ مصادقة مفوضية العون الإنساني عليه.</p>
+    <p data-en="9.2 All matters not covered by this constitution shall be governed by the relevant Sudanese laws and the regulations of the Humanitarian Aid Commission.">9.2 تُحكم جميع الأمور التي لم يتناولها هذا الدستور بالقوانين السودانية ذات الصلة ولوائح مفوضية العون الإنساني.</p>
+    <p data-en="9.3 The official working language of the organization is Arabic; the organization may also use English in its international correspondence.">9.3 اللغة الرسمية للعمل في المنظمة هي العربية، ويجوز للمنظمة استخدام الإنجليزية في مراسلاتها الدولية.</p>
+    <p data-en="9.4 This constitution supersedes all previous internal regulations of the organization.">9.4 يُعتبر هذا الدستور ناسخاً لجميع اللوائح الداخلية السابقة للمنظمة.</p>
+  </div>
+
+  <!-- BACK BUTTON -->
+  <div class="back-row">
+    <a href="about.html">
+      <svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      <span data-en="Back to About Us">العودة إلى من نحن</span>
+    </a>
+  </div>
+
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="fgrid">
+      <div class="f-brand">
+        <a href="index.html" class="brand">
+          <img src="images/logo.jpg" alt="ATTAA logo">
+          <span class="brand-text">
+            <span class="brand-name" data-en="Attaa Organization">منظمة عطاء</span>
+            <span class="brand-sub" data-en="for Peace and Development">للسلام والتنمية</span>
+          </span>
+        </a>
+        <p data-en="We work with Sudanese communities to build a safe, stable and productive homeland.">نعمل مع المجتمعات السودانية لبناء وطن آمن، مستقر، ومنتج يحفظ كرامة الجميع.</p>
+        <p class="f-reg" data-en="ATTAA Organization for Peace and Development was established as a community-based organization (CBO) in 2019 in Sinnar State and was registered federally with the Humanitarian Aid Commission in Port Sudan in 2024 under the Humanitarian Work Law of 2006, as a national organization (NGOs) under No. 623/2024.">تأسست منظمة عطاء للسلام والتنمية كمنظمة قاعدية (CBO) في العام 2019 بولاية سنار، وتم تسجيلها اتحادياً بمفوضية العون الإنساني ببورتسودان في العام 2024 تحت قوانين العمل الإنساني للعام 2006، كمنظمة وطنية (NGOs) تحت الرقم 623/2024.</p>
+        <small>HAC Registration No. 623/2024</small>
+      </div>
+      <div>
+        <h4 data-en="Quick links">روابط أساسية</h4>
+        <ul>
+          <li><a href="policies.html" data-en="Policies &amp; Governance">السياسات والحوكمة</a></li>
+          <li><a href="accountability.html" data-en="Accountability &amp; Complaints">المساءلة والشكاوى</a></li>
+          <li><a href="about.html" data-en="About Us">من نحن</a></li>
+          <li><a href="constitution-org.html" data-en="Organization Constitution">دستور المنظمة</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-en="Contact us">تواصل معنا</h4>
+        <ul>
+          <li data-en="Khartoum, Sudan">الخرطوم، السودان</li>
+          <li data-en="State offices — Sennar">ومكاتب الولايات — سنار</li>
+          <li><a href="mailto:info@attaa.org" style="font-family:Inter,sans-serif">info@attaa.org</a></li>
+        </ul>
+      </div>
+      <div class="report-box" id="report">
+        <svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+        <h4 data-en="Have a report?">هل لديك بلاغ؟</h4>
+        <p data-en="We guarantee confidentiality and protection from retaliation.">نضمن السرية والحماية من الانتقام.</p>
+        <a href="accountability.html" data-en="Go to the accountability portal">انتقل إلى بوابة المساءلة</a>
+      </div>
+    </div>
+    <div class="fbottom">
+      <span data-en="© 2025 Attaa Organization for Peace and Development. All rights reserved.">© 2025 منظمة عطاء للسلام والتنمية. جميع الحقوق محفوظة.</span>
+      <span><a href="#" data-en="Privacy">الخصوصية</a> · <a href="#" data-en="Terms of use">شروط الاستخدام</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="protect.js"></script>
+</body>
+</html>
